@@ -1,0 +1,183 @@
+/* Navbar styles */
+
+.Navbar {
+    width: 100%;
+    height: 40px;
+    background-color: #FF201F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navContainer {
+    width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navContainer .navAdres p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.navContainer .navTelRegion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.navContainer .navTelRegion p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #FFFFFF;
+
+}
+
+.navContainer .navTelRegion p span {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.navContainer .navTelRegion select {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+
+}
+
+.navContainer .navTelRegion select option {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    background-color: black;
+}
+
+/* Header styles */
+
+.Header {
+    width: 100%;
+    height: 95px;
+    -webkit-box-shadow: 0px 10px 54px -17px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 10px 54px -17px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 10px 54px -17px rgba(34, 60, 80, 0.2);
+}
+
+.Header .headerConpanents {
+    width: 100%;
+    height: 55px;
+    background-color: #FFFFFF;
+}
+
+.headerConpanents .headerContainer {
+    width: 1240px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0 auto;
+}
+
+.Header .headerConpanents .userProductsinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.Header .headerConpanents .userProductsinfo .userInfoProduct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 7px 12px;
+    transition: all 0.4s ease;
+}
+
+.Header .headerConpanents .userProductsinfo .userInfoProduct:hover {
+    background-color: #928e8e25;
+    transition: all 0.4s ease;
+}
+
+.Header .headerConpanents .userProductsinfo .userInfoProduct p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #000000;
+}
+
+/* KategoriBtn styles */
+
+.KategoriBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 139px;
+    height: 35px;
+    background-color: #E81D1C;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.KategoriBtn:active {
+    scale: 70%;
+    transition: all 0.4s ease;
+
+}
+
+.KategoriBtn p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+/* Search styles */
+
+
+.Search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0;
+    width: 396px;
+    height: 35px;
+    border: 1px solid #ACACAC;
+
+}
+
+.Search input {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.Search .serarchIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 67px;
+    height: 35px;
+    background: #E81D1C;
+
+}
