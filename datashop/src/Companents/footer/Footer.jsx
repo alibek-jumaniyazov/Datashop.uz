@@ -21,6 +21,7 @@ export default function Footer() {
                         <p>datashop@gmail.com</p>
                     </div>
                 </div>
+                
                 <div className="footerInfos">
                     <div className="footerInfo">
                         <p>О компании</p>
