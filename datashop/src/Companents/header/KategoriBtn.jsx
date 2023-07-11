@@ -1,6 +1,5 @@
 import React from 'react'
-import iconCategory from '../../images/icons/categoryIcon.svg'
-export default function KategoriBtn({categoryOpen}) {
+export default function KategoriBtn({categoryOpen,iconCategory}) {
   return (
     <div className='KategoriBtn' onClick={() => categoryOpen()}>
         <img src={iconCategory} alt="" />
