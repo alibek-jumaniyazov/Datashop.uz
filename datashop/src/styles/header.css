@@ -251,6 +251,8 @@
     transition: all 0.4s ease;
     cursor: pointer;
     color: #666363;
+        border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .categoryContainer .categoryNames .categoryName:hover {
@@ -258,7 +260,8 @@
     transition: all 0.4s ease;
     color: #ffffff;
     fill: #ffffff;
-
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .categoryContainer .categoryNames .categoryName .categoryNameIcon {
