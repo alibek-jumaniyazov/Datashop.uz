@@ -1,0 +1,148 @@
+.laptop {
+    transition: all 0.5s ease;
+    width: 240px;
+    height: 301px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.laptopImg {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.laptop:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+
+}
+
+.laptop img {
+    transition: all 0.5s ease;
+    max-width: 200px;
+    max-height: 161px;
+    margin-bottom: 20px;
+    z-index: 99;
+}
+
+.laptop:hover img {
+    transition: all 0.5s ease;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.laptopInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px 22px;
+}
+
+.laptopInfo span {
+    color: #000000;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3C3C3C;
+}
+
+.inner::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.191);
+    z-index: 99;
+    box-sizing: border-box;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    transition: all .4s ease;
+    transform: scaleY(0);
+}
+
+.servicess:hover .inner::after,
+.servicess:hover .inner::before {
+    border-color: red;
+    z-index: 9;
+    animation: fade 0.8s both ease;
+}
+
+
+
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scaleY(1);
+    }
+}
+
+.goShopBtnClose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    padding: 5px 10px ;
+    border: 2px solid #E81D1C;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    cursor: pointer;
+    background-color: #e81c1c;
+    border-radius: 6px;
+    z-index: 99;
+}
+
+.laptopImg {
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.laptopImg:hover .goShopBtnClose {
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.servicess {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    width: 240px;
+    height: 301px;
+}
+.addKarzinka{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

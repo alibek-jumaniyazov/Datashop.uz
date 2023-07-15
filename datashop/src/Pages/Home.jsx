@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Banners from '../Companents/home/Banners'
 import Boxes from '../Companents/home/Boxes'
 import img1 from "../images/laptop.png"
+import Products from './Products'
 export default function Home() {
 
   const [box , setBox] = useState([
@@ -65,7 +66,7 @@ export default function Home() {
             ))
           }
         </div>
-
+          <Products/>
     </div>
   )
 }
