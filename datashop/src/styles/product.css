@@ -1,6 +1,6 @@
 .laptop {
     transition: all 0.5s ease;
-    width: 240px;
+    width: 230px;
     height: 301px;
     display: flex;
     flex-direction: column;
@@ -108,7 +108,7 @@
     justify-content: center;
     align-items: center;
     transition: all 0.5s ease;
-    padding: 5px 10px ;
+    padding: 5px 10px;
     border: 2px solid #E81D1C;
     font-weight: 500;
     font-size: 14px;
@@ -137,12 +137,50 @@
     display: flex;
     justify-self: center;
     align-self: center;
-    width: 240px;
+    width: 223px;
     height: 301px;
 }
-.addKarzinka{
+
+.addKarzinka {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.ProductsName {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ProductsName .pName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #3C3C3C;
+    gap: 10px;
+}
+.ProductsName .productall{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #3C3C3C;
+    gap: 10px;
+} 
+.allProducts{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px auto;
 }
