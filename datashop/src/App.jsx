@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter, Link, Route, Routes, useNavigate, redirect, Navigate } from 'react-router-dom'
 import Header from './Companents/header/Header'
 import Footer from './Companents/footer/Footer'
-import Home from './Pages/Hame'
+import Home from './Pages/Home'
 
 function App() {
 

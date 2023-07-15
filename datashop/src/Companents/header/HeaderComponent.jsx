@@ -35,17 +35,17 @@ export default function HeaderComponent() {
                     <div className="userProductsinfo">
                         <div className="userInfoProduct">
                             <img src={cardShop} alt="" />
-                            <p>Корзина</p>
+                            <span>Корзина</span>
                         </div>
 
                         <div className="userInfoProduct">
                             <img src={heart} alt="" />
-                            <p>Избранное</p>
+                            <span>Избранное</span>
                         </div>
 
                         <div className="userInfoProduct">
                             <img src={user} alt="" />
-                            <p>Профиль</p>
+                            <span>Профиль</span>
                         </div>
                     </div>
                 </div>
