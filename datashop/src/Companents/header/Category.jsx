@@ -7,7 +7,7 @@ export default function Category({ categoryClass }) {
         <div className={categoryClass}>
             <div className="categoryContainer">
                 <div className="categoryNames">
-                    <div className="categoryName">
+                    <div className="categoryName"> 
                         {/* <img src="" alt="" /> */}
                         <div className="categoryNameIcon">
                             <svg width="22" height="18" viewBox="0 0 22 18"  xmlns="http://www.w3.org/2000/svg">

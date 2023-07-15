@@ -61,8 +61,8 @@ export default function Home() {
         <Banners/>
         <div className="allBox">
           {
-            box.map((item) => (
-                <Boxes item={item}/>
+            box.map((item,index) => (
+                <Boxes item={item} key={index}/>
             ))
           }
         </div>
