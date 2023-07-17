@@ -29,6 +29,7 @@
     border-radius: 12px;
     display: flex;
     justify-content: space-around;
+    z-index: 9;
     align-items: center;
     background: rgb(96, 178, 255);
     background: linear-gradient(0deg, rgba(41, 90, 185, 1) 0%, rgba(96, 178, 255, 1) 100%);
@@ -37,6 +38,7 @@
 .Boxes img {
     width: 130px;
     margin-right: -20px;
+    z-index: 1;
 }
 
 .boxName {
