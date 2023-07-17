@@ -1,3 +1,6 @@
+.Home {
+}
+
 .Banners img {
     position: relative;
     z-index: 1 !important;
@@ -30,14 +33,81 @@
     background: rgb(96, 178, 255);
     background: linear-gradient(0deg, rgba(41, 90, 185, 1) 0%, rgba(96, 178, 255, 1) 100%);
 }
-.Boxes img{
+
+.Boxes img {
     width: 130px;
     margin-right: -20px;
 }
+
 .boxName {
     font-size: 20px;
     font-weight: 700;
     line-height: 33px;
     color: #FFFFFF;
 
+}
+
+.brendContainer {
+    position: absolute;
+    width: 100%;
+    background-color: #E81D1C;
+    height: 248px;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+.allCarusalLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.LogosCarusel {
+    width: 100%;
+    height: 248px;
+    margin: 50px auto;
+}
+
+
+.brandLogo {
+    width: 150px;
+    height: 112px;
+    border-radius: 10px;
+
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brandLogo img {
+    width: 77px;
+    height: 60px;
+
+}
+
+.swiper-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 1240px;
+}
+
+.AksesuarName {
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.AksesuarName span {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
 }

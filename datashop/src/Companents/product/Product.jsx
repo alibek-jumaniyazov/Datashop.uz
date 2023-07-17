@@ -3,7 +3,7 @@ import img from '../../images/notebook.png'
 
 export default function Product({item}) {
 
-console.log(item);
+// console.log(item);
 
     return (
         <div className="servicess" >
