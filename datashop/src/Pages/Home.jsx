@@ -14,6 +14,7 @@ import "swiper/css/autoplay";
 import LogosCarusel from '../Companents/home/LogosCarusel'
 import AksesuarName from '../Companents/home/AksesuarName'
 import { UserContext } from '../Context/UserContext'
+import AksesuarImg from '../Companents/home/AksesuarImg'
 export default function Home() {
 
 
@@ -36,7 +37,7 @@ export default function Home() {
       <AksesuarName />
       <LogosCarusel />
       <AksesuarName />
-      
+      <AksesuarImg/>
       <Products />
     </div>
   )

@@ -111,3 +111,18 @@
     font-weight: 700;
     line-height: 27px;
 }
+.AksesuarImg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 50px auto;
+}
+.images{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
