@@ -1,5 +1,8 @@
 import React from 'react'
-import img1 from '../../images/Frame 1.png'
+import img1 from '../../images/banner1.png'
+import img2 from '../../images/banner2.png'
+import img3 from '../../images/banner4.png'
+import img4 from '../../images/banner6.png'
 export default function Banners() {
     return (
         <div className='Banners'>
@@ -9,10 +12,13 @@ export default function Banners() {
                         <img src={img1} className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src={img1} className="d-block w-100" alt="..." />
+                        <img src={img2} className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src={img1} className="d-block w-100" alt="..." />
+                        <img src={img3} className="d-block w-100" alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src={img4} className="d-block w-100" alt="..." />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
