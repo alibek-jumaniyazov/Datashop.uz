@@ -1,47 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Product from '../Companents/product/Product'
 import ProductsName from '../Companents/product/ProductsName'
+import { UserContext } from '../Context/UserContext'
 
 export default function Products() {
+
+  const { category, product } = useContext(UserContext)
+
   return (
     <div className='Products'>
       <ProductsName />
       <div className="allProducts">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />    nbmnb
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        {
+          product.map((item, index) => (
+            <Product item={item} key={index}/>
+          ))
+        }
       </div>
     </div>
   )

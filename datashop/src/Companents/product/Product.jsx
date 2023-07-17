@@ -1,19 +1,22 @@
 import React from 'react'
 import img from '../../images/notebook.png'
 
-export default function Product() {
+export default function Product({item}) {
+
+console.log(item);
+
     return (
         <div className="servicess" >
             <div className="laptop">
                 <div className="content">
                         <div className="inner">
                             <div className="laptopImg" >
-                                <img src={img} alt="" />
+                                <img src={`http://localhost:9060/upload/${item.image}`} alt="" />
                             </div>
                             <div className="laptopInfo">
-                                <span className='lapName'>HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..</span>
+                                <span className='lapName'>{item.description}</span>
                                 <div className="addKarzinka">
-                                    <span id='productPrice' className='price'>14.540.000 UZS</span>
+                                    <span id='productPrice' className='price'>{item.price} UZS</span>
                                     <button className="goShopBtnClose"><i className="fa-solid fa-cart-shopping" style={{color:"#fffff"}}></i></button>
                                 </div>
                             </div>

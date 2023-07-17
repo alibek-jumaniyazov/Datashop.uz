@@ -271,6 +271,9 @@
     align-items: center;
     gap: 18px;
 }
+.categoryContainer .categoryNames .categoryName .categoryNameIcon span{
+
+}
 
 ::-webkit-scrollbar {
     width: 0;

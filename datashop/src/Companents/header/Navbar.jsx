@@ -10,7 +10,7 @@ export default function Navbar() {
                 <div className="navTelRegion">
                     <span className='telNumber'>Телефон поддержки: <span>(99) 900 10 10</span></span>
                     <select >
-                        <option value="O'z"><img src={uzbIcon} alt="" /> O'z </option>
+                        <option value="O'z"> O'z </option>
                         <option value="Rus">Rus</option>
                     </select>
                 </div>
