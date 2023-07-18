@@ -275,6 +275,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    gap: 25px;
 }
 
 .productInfoApi .productInfoApiTitle {
@@ -289,13 +290,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    gap: 13px;
 }
 
 .seriesProductInfo {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 200px;
+    align-items: flex-start;
+    width: 280px;
+
 
 }
 
@@ -304,11 +307,111 @@
     font-weight: 400;
     line-height: 17px;
     color: #828282;
+    width: 147px;
 }
 
 .seriesProductInfo p {
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
+    color: #000000;
+    width: 101px;
+}
+
+.orderProduct {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.orderAdd {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 26px 21px;
+    gap: 13px;
+    width: 290px;
+    height: 186px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #0000001A;
+    z-index: 10;
+}
+
+.orderAdd p {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 27px;
+    text-align: left;
+    color: #474747;
+}
+
+.oderBtn {
+    width: 248px;
+    height: 39px;
+    background: #E81D1C;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11.8px;
+    padding: 10px;
+    transition: all 0.4s ease;
+}
+
+.orederNow {
+    width: 248px;
+    height: 39px;
+    background: #FFFFFF;
+    border: 1px solid #E81D1C;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #000000;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.4s ease;
+
+}
+
+.orederNow:active,
+.oderBtn:active {
+    scale: 60%;
+    transition: all 0.4s ease;
+}
+
+.orderInfos {
+    width: 289px;
+    height: 184px;
+    box-shadow: 0px 0px 10px 0px #0000000D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 22px;
+}
+
+.oderMiniInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 27px;
+
+}
+
+.oderMiniInfo p {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
     color: #000000;
 }
