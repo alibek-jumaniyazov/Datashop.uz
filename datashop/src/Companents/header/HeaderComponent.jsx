@@ -8,18 +8,19 @@ import Search from './Search'
 import Category from './Category'
 import iconCategory from '../../images/icons/categoryIcon.svg'
 import xIcon from '../../images/icons/x.svg'
+import { Link } from 'react-router-dom'
 
 export default function HeaderComponent() {
 
-    const [categoryClass , setCategoriClass] = useState("noneCategory")
-    const[categoryIcon , setCategoryIcon] = useState(iconCategory)
+    const [categoryClass, setCategoriClass] = useState("noneCategory")
+    const [categoryIcon, setCategoryIcon] = useState(iconCategory)
 
-    function categoryOpen(){
-        if(categoryClass == 'noneCategory'){
+    function categoryOpen() {
+        if (categoryClass == 'noneCategory') {
             setCategoriClass('Category')
             setCategoryIcon(xIcon)
         }
-        if(categoryClass == 'Category'){
+        if (categoryClass == 'Category') {
             setCategoriClass('noneCategory')
             setCategoryIcon(iconCategory)
         }
@@ -29,8 +30,8 @@ export default function HeaderComponent() {
         <>
             <div className="headerConpanents">
                 <div className="headerContainer ">
-                    <img src={logo} alt="" />
-                    <KategoriBtn categoryOpen={categoryOpen} iconCategory={categoryIcon}/>
+                    <Link to={'/'}> <img src={logo} alt="" /> </Link>
+                    <KategoriBtn categoryOpen={categoryOpen} iconCategory={categoryIcon} />
                     <Search />
                     <div className="userProductsinfo">
                         <div className="userInfoProduct">
@@ -50,7 +51,7 @@ export default function HeaderComponent() {
                     </div>
                 </div>
             </div>
-            <Category categoryClass={categoryClass}/>
+            <Category categoryClass={categoryClass} />
 
         </>
     )

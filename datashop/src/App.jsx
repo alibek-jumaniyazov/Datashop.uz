@@ -5,6 +5,8 @@ import Footer from './Companents/footer/Footer'
 import Home from './Pages/Home'
 import axios from 'axios';
 import { UserProvider } from './Context/UserContext.jsx'
+import Admin from './AdminPanel/Admin'
+import ProductInfo from './Pages/ProductInfo'
 function App() {
 
 
@@ -13,12 +15,16 @@ function App() {
 
   return (
     <UserProvider>
+      <Routes>
+        <Route path='admin' element={<Admin />} />
+      </Routes>
       <div className='App'>
         <Header />
-        <div className="fakeHeader">sdfsgefa</div>
+        <div className="fakeHeader"></div>
         <div className="container">
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='product' element={<ProductInfo />} />
           </Routes>
         </div>
         <Footer />

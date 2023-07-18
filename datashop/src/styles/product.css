@@ -1,4 +1,4 @@
-.Products{
+.Products {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,7 +174,8 @@
     color: #3C3C3C;
     gap: 10px;
 }
-.ProductsName .productall{
+
+.ProductsName .productall {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,8 +184,9 @@
     line-height: 17px;
     color: #3C3C3C;
     gap: 10px;
-} 
-.allProducts{
+}
+
+.allProducts {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -192,4 +194,121 @@
     flex-wrap: wrap;
     width: 100%;
     margin: 20px auto;
+}
+
+.ProductInfo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 20px auto;
+}
+
+.productLocation {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #767676;
+    cursor: pointer;
+}
+
+.productLocation span {
+    color: #3F3F3F;
+}
+
+.productName {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 31px;
+    color: #3C3C3C;
+}
+
+.prooductInfos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 30px auto;
+}
+
+.productImages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.productImagesBigImg {
+    width: 439px;
+    height: 409px;
+    padding: 81px 55px 81px 55px;
+    border-radius: 10px;
+    border: #D1D1D1 solid 0.5px;
+
+}
+
+.productImagesBigImg img {
+    width: 329px;
+    height: 247px;
+}
+
+.productMiniImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.productMiniImages img {
+    cursor: pointer;
+    width: 64px;
+    height: 82px;
+    padding: 13px 4px 13px 0px;
+    border-radius: 5px;
+}
+
+.productInfoApi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.productInfoApi .productInfoApiTitle {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #000000;
+}
+
+.arxitekturniProductInfos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.seriesProductInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+
+}
+
+.seriesProductInfo span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #828282;
+}
+
+.seriesProductInfo p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #000000;
 }
