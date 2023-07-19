@@ -6,9 +6,13 @@
     list-style-type: none;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    text-decoration: none!important;
 }
 
 .container{
     width: 1240px;
     margin: 0 auto;
+}
+.none{
+  display: none;
 }

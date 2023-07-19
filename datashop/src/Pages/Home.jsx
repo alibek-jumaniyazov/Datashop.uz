@@ -20,7 +20,6 @@ export default function Home() {
 
   const {category , product} = useContext(UserContext)
 
-  console.log(category);
 
   return (
     <div className='Home'>

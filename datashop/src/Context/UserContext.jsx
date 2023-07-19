@@ -7,6 +7,7 @@ const UserContext = createContext();
 const UserProvider = ({ children }) => {
   const [category, setCategory] = useState([]);
   const [product, setProduct] = useState([]);
+  const [aaa , setAAA] = useState([])
 
   useEffect(() => {
     const GetApi = async () => {
@@ -27,7 +28,9 @@ const UserProvider = ({ children }) => {
 
   const values = {
     category,
-    product
+    product,
+    aaa , 
+    setAAA
   };
 
   return (
