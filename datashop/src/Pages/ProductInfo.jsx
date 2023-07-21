@@ -13,13 +13,12 @@ export default function ProductInfo() {
 
     const { category, product, aaa, setAAA } = useContext(UserContext)
 
+    
     const [allInfoClass , setAllInfoClass] = useState({
         opisani:"opisaniText",
         xarakter:"none",
         otziv:"none"
     })
-
-
 
     const [allInfo , setallInfo] = useState(
         {
@@ -27,6 +26,11 @@ export default function ProductInfo() {
             left:0,
         }
     )
+
+
+
+
+
 
     function opisaniOpen(){
         setallInfo({
