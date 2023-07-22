@@ -10,7 +10,7 @@ import iconCategory from '../../images/icons/categoryIcon.svg'
 import xIcon from '../../images/icons/x.svg'
 import { Link } from 'react-router-dom'
 
-export default function HeaderComponent() {
+export default function HeaderComponent({addREgister}) {
 
     const [categoryClass, setCategoriClass] = useState("noneCategory")
     const [categoryIcon, setCategoryIcon] = useState(iconCategory)
@@ -24,6 +24,7 @@ export default function HeaderComponent() {
             setCategoriClass('noneCategory')
             setCategoryIcon(iconCategory)
         }
+        
     }
 
     return (
@@ -44,7 +45,7 @@ export default function HeaderComponent() {
                             <span>Избранное</span>
                         </div>
 
-                        <div className="userInfoProduct">
+                        <div className="userInfoProduct" onClick={() => addREgister()}>
                             <img src={user} alt="" />
                             <span>Профиль</span>
                         </div>

@@ -109,6 +109,7 @@ hr {
     font-weight: 400;
     line-height: 15px;
     color: #4580D8;
+    cursor: pointer;
 }
 .fa-x{
     transform: translateY(-270px);

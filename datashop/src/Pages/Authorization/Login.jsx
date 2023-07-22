@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
 
-const Login = () => {
+const Login = ({loginClass ,setLogikn , registerClass , setRegister}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+
+  function closeLogin(){
+    setLogikn('none')
+  }
+
+  function openReg() {
+    setLogikn('none')
+    setRegister('blockPage')
+  }
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -36,7 +45,7 @@ const Login = () => {
   };
 
   return (
-    <div className='blockPage'>
+    <div className={loginClass}>
       <div className='Register'>
         <h1>Kirish</h1>
         <form onSubmit={handleSubmit} className='inputsFrom'>
@@ -67,11 +76,11 @@ const Login = () => {
             </div>
           </div>
           <hr />
-          <p className='loginAddPageText'>Ro'yhatdan o'tmaganmisiz? <a href="">Ro'yhatdan o'ting</a> </p>
+          <p className='loginAddPageText'>Ro'yhatdan o'tmaganmisiz? <span href="" onClick={() => openReg()}>Ro'yhatdan o'ting</span> </p>
           <button type="submit">Kirish</button>
         </form>
       </div>
-      <i className="fa-solid fa-x" style={{ color: "#0000000", fontSize: "30ppx" }}></i>
+      <i className="fa-solid fa-x" style={{ color: "#0000000", fontSize: "30ppx" }} onClick={() => closeLogin()}></i>
     </div>
   )
 };

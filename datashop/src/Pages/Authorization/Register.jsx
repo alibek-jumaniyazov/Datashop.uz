@@ -1,9 +1,18 @@
 import { useState } from 'react'
-export default function Register() {
+export default function Register({registerClass ,setRegister , loginClass ,setLogikn}) {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  function closeRegister(){
+    setRegister('none')
+  }
+
+  function openLogin() {
+    setLogikn('blockPage')
+    setRegister('none')
+  }
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -46,7 +55,7 @@ export default function Register() {
     //   });
   };
   return (
-    <div className='blockPage'>
+    <div className={registerClass}>
       <div className='Register'>
         <h1>Вход / Регистрация</h1>
         <form onSubmit={handleSubmit} className='inputsFrom'>
@@ -104,11 +113,11 @@ export default function Register() {
             </div>
           </div>
           <hr />
-          <p className='loginAddPageText'>У меня есть аккаунт <a href="">Login</a> </p>
+          <p className='loginAddPageText'>У меня есть аккаунт <span href="" onClick={() => openLogin()}>Login</span> </p>
           <button type="submit">Ro'yhatdan o'tish</button>
         </form>
       </div>
-      <i class="fa-solid fa-x" style={{ color: "#0000000" ,fontSize:"30ppx"  }} ></i>
+      <i class="fa-solid fa-x" style={{ color: "#0000000" ,fontSize:"30ppx"  }} onClick={() => closeRegister()}></i>
     </div>
   )
 }
