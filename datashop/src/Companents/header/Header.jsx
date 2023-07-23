@@ -8,7 +8,7 @@ export default function Header() {
 
   const [registerClass , setRegister] = useState('none')
   const [loginClass , setLogikn ] = useState('none')
-  const [verifyClass , setVerify ] = useState('blockPage')
+  const [verifyClass , setVerify ] = useState('none')
   const user = JSON.parse(localStorage.getItem('user'))
   function addREgister(){
 
