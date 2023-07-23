@@ -1,10 +1,11 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 
-const Login = ({loginClass ,setLogikn , registerClass , setRegister}) => {
-  const [username, setUsername] = useState('');
+const Login = ({ loginClass, setLogikn, setRegister , setVerify}) => {
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  function closeLogin(){
+  function closeLogin() {
     setLogikn('none')
   }
 
@@ -13,9 +14,10 @@ const Login = ({loginClass ,setLogikn , registerClass , setRegister}) => {
     setRegister('blockPage')
   }
 
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
   };
+
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
@@ -24,24 +26,34 @@ const Login = ({loginClass ,setLogikn , registerClass , setRegister}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!username || !password) {
+    if (!email || !password) {
       alert('Iltimos, foydalanuvchi nomi va parolni kiriting');
       return;
     }
 
-    // Login logikasi
-    console.log('Foydalanuvchi nomi va parol:', {
-      username,
+    const body = {
+      email,
       password
-    });
+    }
+
+    // Login logikasi
+    console.log('Foydalanuvchi nomi va parol:', body);
     // Bu erda API ga ma'lumotlarni yuborish yoki serverga POST qilishni qo'shishingiz mumkin
-    // axios.post('API_ENDPOINT', { username, password })
-    //   .then(response => {
-    //     console.log('Muvaffaqiyatli kirildingiz!', response.data);
-    //   })
-    //   .catch(error => {
-    //     console.error('Kirishda xatolik yuz berdi:', error);
-    //   });
+    const RequestLogin = async () => {
+      try {
+        const response = await axios.post("http://localhost:9060/api/v1/auth/login", body)
+        localStorage.setItem('user', JSON.stringify(response.data))
+        console.log(response.data);
+        setVerify('none')
+        setRegister('none')
+        setLogikn('none')
+      }
+      catch (error) {
+       console.log(error);
+      }
+    }
+
+    RequestLogin()
   };
 
   return (
@@ -50,15 +62,15 @@ const Login = ({loginClass ,setLogikn , registerClass , setRegister}) => {
         <h1>Kirish</h1>
         <form onSubmit={handleSubmit} className='inputsFrom'>
           <div className='inputFrom'>
-            <label htmlFor="username">Name</label>
+            <label htmlFor="email">Name</label>
             <div className="registerInput">
               <i className="fa-regular fa-user" style={{ color: "#85878a" }}></i>
               <input
-                type="text"
-                id="username"
-                value={username}
-                onChange={handleUsernameChange}
-                placeholder='User name'
+                type="email"
+                id="email"
+                value={email}
+                onChange={handleEmailChange}
+                placeholder='Email'
               />
             </div>
           </div>

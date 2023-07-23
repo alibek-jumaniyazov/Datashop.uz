@@ -27,6 +27,8 @@ export default function HeaderComponent({addREgister}) {
         
     }
 
+    const user = JSON.parse(localStorage.getItem('user'))
+
     return (
         <>
             <div className="headerConpanents">
@@ -47,7 +49,14 @@ export default function HeaderComponent({addREgister}) {
 
                         <div className="userInfoProduct" onClick={() => addREgister()}>
                             <img src={user} alt="" />
-                            <span>Профиль</span>
+                            <span>
+                                {
+                                    user ?
+                                        user.user.name 
+                                        :
+                                        "Profil"
+                                }
+                            </span>
                         </div>
                     </div>
                 </div>

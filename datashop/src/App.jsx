@@ -23,10 +23,8 @@ function App() {
         <div className="fakeHeader"></div>
         <div className="container">
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='product' element={<ProductInfo />} />
-            <Route path='register' element={<Register/>} />
-            <Route path='login' element={<Login/>} />
+            <Route exact  path='/' element={<Home />} />
+            <Route exact  path='product' element={<ProductInfo />} />
           </Routes>
         </div>
         <Footer />
