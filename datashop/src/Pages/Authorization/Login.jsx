@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 
-const Login = ({ loginClass, setLogikn, setRegister , setVerify}) => {
+const Login = ({ loginClass, setLogikn, setRegister, setVerify }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -49,7 +49,7 @@ const Login = ({ loginClass, setLogikn, setRegister , setVerify}) => {
         setLogikn('none')
       }
       catch (error) {
-       console.log(error);
+        console.log(error);
       }
     }
 
@@ -91,8 +91,8 @@ const Login = ({ loginClass, setLogikn, setRegister , setVerify}) => {
           <p className='loginAddPageText'>Ro'yhatdan o'tmaganmisiz? <span href="" onClick={() => openReg()}>Ro'yhatdan o'ting</span> </p>
           <button type="submit">Kirish</button>
         </form>
+        <i className="fa-solid fa-x" style={{ color: "#0000000", fontSize: "30ppx" }} onClick={() => closeLogin()}></i>
       </div>
-      <i className="fa-solid fa-x" style={{ color: "#0000000", fontSize: "30ppx" }} onClick={() => closeLogin()}></i>
     </div>
   )
 };

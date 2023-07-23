@@ -88,7 +88,7 @@ export default function Register({ registerClass, setRegister, setLogikn, setVer
                 setLogikn('none')
             }
             catch (error) {
-                alert('Ro\'yhatdan o\'tishda xatolik yuz berdi', error);
+                alert('Emaildan oldin foydalanilgan', error);
             }
         }
 
@@ -202,8 +202,9 @@ export default function Register({ registerClass, setRegister, setLogikn, setVer
                     <p className='loginAddPageText'>У меня есть аккаунт <a href="#" onClick={() => openLogin()}>Login</a> </p>
                     <button type="submit" onClick={() => openVerify()}>Ro'yhatdan o'tish</button>
                 </form>
-            </div>
             <i className="fa-solid fa-x" style={{ color: "#0000000", fontSize: "30ppx" }} onClick={() => closeRegister()}></i>
+
+            </div>
         </div>
     )
 }

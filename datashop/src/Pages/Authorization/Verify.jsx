@@ -34,12 +34,27 @@ export default function Verify({ verifyClass, setVerify, setRegister, setLogikn 
     }
   };
 
+  function closeVerify(){
+    setVerify('none')
+ }
+
+
   return (
     <div className={verifyClass}>
-      <div className='Verify'>
-        <input type='text' value={code} onChange={handleVerifyChange} />
-        <button onClick={() => RequestVerify()}>Send</button>
+      <div className='Register'>
+        <div className="verify">
+          <h1>Kod yuborildi</h1>
+          <p>email@gmail.com shu email pochtaga tasdiqlash kodi yuborildi</p>
+          <div className="verifyINput">
+            <i className="fa-regular fa-envelope" style={{ color: "#85878a" }}></i>
+            <input type='text' value={code} onChange={handleVerifyChange} />
+          </div>
+
+          <button onClick={() => RequestVerify()}>Send</button>
+        </div>
+        <i className="fa-solid fa-x" style={{ color: "#0000000", fontSize: "30ppx" }} onClick={() => closeVerify()}></i>
       </div>
+
     </div>
   );
 }
