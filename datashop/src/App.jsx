@@ -7,8 +7,9 @@ import axios from 'axios';
 import { UserProvider } from './Context/UserContext.jsx'
 import Admin from './AdminPanel/Admin'
 import ProductInfo from './Pages/ProductInfo'
-import Register from './Pages/Authorization/Register'
-import Login from './Pages/Authorization/Login'
+import Karzinka from './Pages/Karzinka'
+// import Register from './Pages/Authorization/Register'
+// import Login from './Pages/Authorization/Login'
 function App() {
 
 
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route exact  path='/' element={<Home />} />
             <Route exact  path='product' element={<ProductInfo />} />
+            <Route  path='savat' elemen={<Karzinka/>} />
           </Routes>
         </div>
         <Footer />
