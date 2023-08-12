@@ -13,7 +13,6 @@ import Karzinka from './Pages/Karzinka'
 function App() {
 
 
-
   return (
     <UserProvider>
       <Routes>
@@ -22,13 +21,14 @@ function App() {
       <div className='App'>
         <Header />
         <div className="fakeHeader"></div>
-        <div className="container">
+        {/* <div className="container">
           <Routes>
             <Route exact  path='/' element={<Home />} />
             <Route exact  path='product' element={<ProductInfo />} />
-            <Route  path='savat' elemen={<Karzinka/>} />
+            <Route exact  path='savat' elemen={} />
           </Routes>
-        </div>
+        </div> */}
+        <Karzinka/>
         <Footer />
       </div>
     </UserProvider>

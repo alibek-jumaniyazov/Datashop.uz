@@ -1,0 +1,21 @@
+.Karzinka{
+    position: relative;
+    width: 1240px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+    flex-direction: column;
+}
+.titlePage{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+}
+.ProductPriceAllBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: ; */
+}

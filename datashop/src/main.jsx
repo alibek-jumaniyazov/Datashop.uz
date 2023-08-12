@@ -9,6 +9,7 @@ import './styles/main.css'
 import './styles/product.css'
 import './styles/admin.css'
 import './styles/user.css'
+import './styles/karzinka.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
