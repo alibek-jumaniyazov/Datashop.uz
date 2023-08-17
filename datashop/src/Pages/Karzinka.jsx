@@ -14,10 +14,15 @@ export default function Karzinka() {
           <div className="karzinkaProductAll">
             <div className="allProductHeaderInfo">
               <p>Детали продуктов</p>
-              <p>Количество</p>
+              <p className='counterName'>Количество</p>
               <p>Цена</p>
             </div>
             <div className="KarzinkaProducts">
+              <KarzinkaProduct />
+              <KarzinkaProduct />
+              <KarzinkaProduct />
+              <KarzinkaProduct />
+              <KarzinkaProduct />
               <KarzinkaProduct />
               <KarzinkaProduct />
               <KarzinkaProduct />

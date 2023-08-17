@@ -1,21 +1,255 @@
-.Karzinka{
+.Karzinka {
     position: relative;
     width: 1240px;
     margin: 30px auto;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 100px;
+    gap: 0px;
     flex-direction: column;
+    margin-bottom: 50px;
 }
-.titlePage{
+
+.titlePage {
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
 }
-.ProductPriceAllBox{
+
+.ProductPriceAllBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: ; */
+    width: 100%;
+}
+
+.KarzinkaProducts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 70px;
+    flex-direction: column;
+    width: 800px;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+.KarzinkaProduct {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.karzinkaProductImg {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.karzinkaProductInfos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.karzinkaProductInfos h5 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+}
+
+.karzinkaProductInfos p {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #E81D1C;
+}
+
+.karzinkaProductInfos span {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+}
+
+.karzinkaProductImg img {
+    width: 116px;
+    height: 87px;
+    transform: translateX(-10px);
+}
+
+.krProductCounterPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 159px;
+}
+
+.krProductCounter {
+    width: 84px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.counterName {
+    margin-left: 90px;
+}
+
+.krProductCounter span {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* gap: ; */
+    width: 35px;
+    height: 24px;
+    border-radius: 4px;
+    border: solid 1px #C1C1C1;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #8C8C8C;
+}
+
+.krProductPrice {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: #474747;
+
+}
+
+.karzinkaInfoPrice {
+    width: 350px;
+    height: 393px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #00000026;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+}
+
+.allProductHeaderInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.karzinkaNameHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D9D9D9;
+    margin: 30px auto;
+    padding-bottom: 10px;
+}
+
+.karzinkaNameHeader p {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 31px;
+    color: #3C3C3C;
+}
+
+.karzinkaNameHeader span {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #3C3C3C;
+}
+
+.miniPrices {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-bottom: 1px solid #8C8C8C;
+    margin-bottom: 15px;
+
+}
+
+.miniPrice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.miniPrice p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+
+}
+
+.miniPrice span {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: #888888;
+}
+
+.dastavki {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+.dastavki p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+
+}
+
+.dastavki span {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    color: #888888;
+}
+
+.priceInfoBtn {
+    width: 320px;
+    height: 44px;
+    background: #E81D1C;
+
+}
+
+.priceInfoBtn p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -1rem;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.footerTitle {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+
+}
+
+.allPrice p {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 27px;
+
 }

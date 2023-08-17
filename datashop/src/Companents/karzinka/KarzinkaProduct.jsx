@@ -12,12 +12,13 @@ export default function KarzinkaProduct() {
                     <span>Удалить</span>
                 </div>
             </div>
-            <div className="krProductCounterPrice">
-                <div className="krProductCounter">
+            <div className="krProductCounter">
                     <p>-</p>
-                    <s>1</s>
+                    <span>1</span>
                     <p>+</p>
                 </div>
+            <div className="krProductCounterPrice">
+                
                 <p className="krProductPrice">6 800 000 СУМ</p>
             </div>
 
