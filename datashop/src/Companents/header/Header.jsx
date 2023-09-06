@@ -6,25 +6,25 @@ import HeaderComponent from './HeaderComponent'
 // import Verify from '../../Pages/Authorization/Verify'
 export default function Header() {
 
-  const [registerClass , setRegister] = useState('none')
-  const [loginClass , setLogikn ] = useState('none')
-  const [verifyClass , setVerify ] = useState('none')
+  const [registerClass, setRegister] = useState('none')
+  const [loginClass, setLogikn] = useState('none')
+  const [verifyClass, setVerify] = useState('none')
   const user = JSON.parse(localStorage.getItem('user'))
-  function addREgister(){
+  function addREgister() {
 
 
     {
       user ?
-      setRegister('none')
-      :
-      setRegister('blockPage')
+        setRegister('none')
+        :
+        setRegister('blockPage')
     }
   }
-  
+
   return (
     <div className='Header'>
       <Navbar />
-      <HeaderComponent addREgister={addREgister}/>
+      <HeaderComponent addREgister={addREgister} />
       {/* <Register registerClass={registerClass} setRegister={setRegister}  setLogikn={setLogikn} setVerify={setVerify} /> */}
       {/* <Login loginClass={loginClass} setLogikn={setLogikn}  setRegister={setRegister} setVerify={setVerify} /> */}
       {/* <Verify verifyClass={verifyClass} setVerify={setVerify} setRegister={setRegister}  setLogikn={setLogikn} /> */}

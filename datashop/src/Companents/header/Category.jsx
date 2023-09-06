@@ -2,12 +2,12 @@ import React, { useContext } from 'react'
 import { UserContext } from '../../Context/UserContext.jsx'
 
 export default function Category({ categoryClass }) {
-
-
+    
+       
     const { category , product} = useContext(UserContext)
-
-
-
+    
+    
+     
     return (
         <div className={categoryClass}>
             <div className="categoryContainer">
