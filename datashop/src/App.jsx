@@ -21,14 +21,14 @@ function App() {
       <div className='App'>
         <Header />
         <div className="fakeHeader"></div>
-        {/* <div className="container">
+        <div className="container">
           <Routes>
             <Route exact  path='/' element={<Home />} />
             <Route exact  path='product' element={<ProductInfo />} />
-            <Route exact  path='savat' elemen={} />
+            <Route exact  path='savat' elemen={<Karzinka/>} />
           </Routes>
-        </div> */}
-        <Karzinka/>
+        </div>
+        {/* <Karzinka/> */}
         <Footer />
       </div>
     </UserProvider>
