@@ -38,11 +38,12 @@ export default function HeaderComponent( //{addREgister} //
                     <KategoriBtn categoryOpen={categoryOpen} iconCategory={categoryIcon} />
                     <Search />
                     <div className="userProductsinfo">
+                        <Link to={'/savat'} >
                         <div className="userInfoProduct">
                             <img src={cardShop} alt="" />
                             <span>Корзина</span>
                         </div>
-
+                        </Link>
                         <div className="userInfoProduct">
                             <img src={heart} alt="" />
                             <span>Избранное</span>

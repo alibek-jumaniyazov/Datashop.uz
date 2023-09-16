@@ -15,17 +15,17 @@ function App() {
 
   return (
     <UserProvider>
-      <Routes>
+      {/* <Routes>
         <Route path='admin' element={<Admin />} />
-      </Routes>
+      </Routes> */}
       <div className='App'>
         <Header />
         <div className="fakeHeader"></div>
         <div className="container">
           <Routes>
-            <Route exact  path='/' element={<Home />} />
-            <Route exact  path='product' element={<ProductInfo />} />
-            <Route exact  path='savat' elemen={<Karzinka/>} />
+            <Route  path='/' element={<Home />} />
+            <Route  path='/product' element={<ProductInfo />} />
+            <Route  path='/savat' elemen={<Karzinka />} />
           </Routes>
         </div>
         {/* <Karzinka/> */}
