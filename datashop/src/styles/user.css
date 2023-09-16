@@ -95,7 +95,8 @@ hr {
     color: #FFFFFF;
     border: none;
 }
-.loginAddPageText{
+
+.loginAddPageText {
     font-size: 12px;
     font-weight: 400;
     line-height: 15px;
@@ -104,22 +105,25 @@ hr {
     justify-content: center;
     align-items: center;
     width: 100%;
-    
+
 }
-.loginAddPageText span{
+
+.loginAddPageText span {
     font-size: 12px;
     font-weight: 400;
     line-height: 15px;
     color: #4580D8;
     cursor: pointer;
 }
-.fa-x{
+
+.fa-x {
     position: absolute;
     top: 20px;
-    right:  30px;    
+    right: 30px;
     cursor: pointer;
 }
-.verify{
+
+.verify {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -127,12 +131,14 @@ hr {
     gap: 30px;
     padding: 20px;
 }
-.verify input{
-    width: 230px!important;
+
+.verify input {
+    width: 230px !important;
     border: none;
     outline: none;
 }
-.verifyINput{
+
+.verifyINput {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -140,19 +146,74 @@ hr {
     padding: 9px 20px;
     gap: 4px;
 }
-.verifyINput i{
+
+.verifyINput i {
     border-right: #C1C1C1 2px solid;
     padding-right: 10px;
 }
-.verify h1{
+
+.verify h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 35px;
 }
-.verify p{
+
+.verify p {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.Kabinet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px auto;
+}
+
+.KabinetPages {
+    width: 270px;
+    height: 156px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px 0px #0000001A;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px 22px;
+}
+
+.pagesText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.4s ease;  
+}
+
+.pagesText p{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.pagesText i{
+    font-size: 19px;
+}
+.KabinetInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.blockInputs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    max-width: 560px;
 }

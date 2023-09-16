@@ -68,6 +68,7 @@
     font-weight: 600;
     line-height: 17px;
     color: #E81D1C;
+    margin-bottom: 1rem;
 }
 
 .karzinkaProductInfos span {
@@ -157,6 +158,7 @@
     font-weight: 600;
     line-height: 31px;
     color: #3C3C3C;
+    margin-bottom: 1rem;
 }
 
 .karzinkaNameHeader span {
@@ -188,7 +190,7 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 19px;
-
+    margin-bottom: 1rem;
 }
 
 .miniPrice span {
@@ -210,10 +212,10 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 19px;
+    margin-bottom: 1rem;
 }
-fmbl{
-    
-}
+  
+
 .dastavki span {
     font-size: 16px;
     font-weight: 600;
@@ -239,6 +241,7 @@ fmbl{
     font-weight: 700;
     line-height: 19px;
     color: #FFFFFF;
+    margin-bottom: 1rem;
 }
 
 .footerTitle {
@@ -252,5 +255,6 @@ fmbl{
     font-size: 20px;
     font-weight: 900;
     line-height: 27px;
+    margin-bottom: 1rem;
 }
     
