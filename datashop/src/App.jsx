@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Link, Route, Routes, useNavigate, redirect, Navigate } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Routes, useNavigate } from 'react-router-dom'
 import Header from './Companents/header/Header'
 import Footer from './Companents/footer/Footer'
 import Home from './Pages/Home'
@@ -8,27 +8,27 @@ import { UserProvider } from './Context/UserContext.jsx'
 import Admin from './AdminPanel/Admin'
 import ProductInfo from './Pages/ProductInfo'
 import Karzinka from './Pages/Karzinka'
+import Kabinet from './Pages/Kabinet'
 // import Register from './Pages/Authorization/Register'
 // import Login from './Pages/Authorization/Login'
-function App() {
 
+function App() {
+  const navigate = useNavigate();
 
   return (
     <UserProvider>
-      {/* <Routes>
-        <Route path='admin' element={<Admin />} />
-      </Routes> */}
       <div className='App'>
         <Header />
+        
         <div className="fakeHeader"></div>
         <div className="container">
           <Routes>
-            <Route  path='/' element={<Home />} />
-            <Route  path='/product' element={<ProductInfo />} />
-            <Route  path='/savat' elemen={<Karzinka />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/product' element={<ProductInfo />} />
+            <Route path='/savat' element={<Karzinka />} />
+            <Route path='/kabinet' element={<Kabinet />} />
           </Routes>
         </div>
-        {/* <Karzinka/> */}
         <Footer />
       </div>
     </UserProvider>

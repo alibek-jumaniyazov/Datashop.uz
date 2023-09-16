@@ -10,8 +10,7 @@ import iconCategory from '../../images/icons/categoryIcon.svg'
 import xIcon from '../../images/icons/x.svg'
 import { Link } from 'react-router-dom'
 
-export default function HeaderComponent( //{addREgister} // 
-) {
+export default function HeaderComponent( {addREgister} ) {
 
     const [categoryClass, setCategoriClass] = useState("noneCategory")
     const [categoryIcon, setCategoryIcon] = useState(iconCategory)
@@ -25,7 +24,7 @@ export default function HeaderComponent( //{addREgister} //
             setCategoriClass('noneCategory')
             setCategoryIcon(iconCategory)
         }
-        
+
     }
 
     const user = JSON.parse(localStorage.getItem('user'))
@@ -39,10 +38,10 @@ export default function HeaderComponent( //{addREgister} //
                     <Search />
                     <div className="userProductsinfo">
                         <Link to={'/savat'} >
-                        <div className="userInfoProduct">
-                            <img src={cardShop} alt="" />
-                            <span>Корзина</span>
-                        </div>
+                            <div className="userInfoProduct">
+                                <img src={cardShop} alt="" />
+                                <span>Корзина</span>
+                            </div>
                         </Link>
                         <div className="userInfoProduct">
                             <img src={heart} alt="" />
@@ -50,16 +49,16 @@ export default function HeaderComponent( //{addREgister} //
                         </div>
 
                         <div className="userInfoProduct"
-                        //  onClick={() => addREgister()}
-                         >
+                            onClick={() => addREgister()}
+                        >
                             <img src={userr} alt="" />
                             <span>
-                                {/* { */}
-                                    {/* user ? */}
-                                        {/* user.user.name  */}
-                                        {/* : */}
-                                        Profil
-                                {/* } */}
+                                {
+                                    user ?
+                                        user.user.name
+                                        :
+                                       "Профиль"
+                                }
                             </span>
                         </div>
                     </div>
