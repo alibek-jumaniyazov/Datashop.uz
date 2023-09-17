@@ -168,9 +168,10 @@ hr {
 
 .Kabinet {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 100px auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 90px auto;
+    gap: 90px;
 }
 
 .KabinetPages {
@@ -190,30 +191,76 @@ hr {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    transition: all 0.4s ease;  
+    transition: all 0.4s ease;
 }
 
-.pagesText p{
+.pagesText p {
     font-size: 16px;
     font-weight: 600;
     line-height: 19px;
     cursor: pointer;
     transition: all 0.4s ease;
 }
-.pagesText i{
+
+.pagesText i {
     font-size: 19px;
 }
-.KabinetInfo{
+
+.KabinetInfo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    gap: 30px;
 }
-.blockInputs{
+
+.blockInputs {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 15px;
+    gap: 24px;
+}
+
+.blockInputs h1 {
+    height: 31px;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 31px;
+
+}
+
+.lnputs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
     max-width: 560px;
+}
+
+.lnputs p {
+    height: 19px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+}
+
+.allWidth {
+    width: 560px;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid #BCBCBC;
+    outline: none;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.smallWidth {
+    width: 270px;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid #BCBCBC;
+    margin-top: 10px;
+    padding-left: 20px;
 }
