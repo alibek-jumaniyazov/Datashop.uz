@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function KabinetPages() {
+export default function KabinetPages({setKabinetCom}) {
     const [color, setColor] = useState({
         info: "#E81D1C",
         order: "#000000",
@@ -13,6 +13,11 @@ export default function KabinetPages() {
             order: "#000000",
             messange: "#000000"
         })
+        setKabinetCom({
+            info: "KabinetInfo",
+            order: "none",
+            messange: "none"
+        })
     }
     function UserOrder() {
         setColor({
@@ -20,12 +25,22 @@ export default function KabinetPages() {
             order: "#E81D1C",
             messange: "#000000"
         })
+        setKabinetCom({
+            info: "none",
+            order: "KabinetoOrder",
+            messange: "none"
+        })
     }
     function UserMess() {
         setColor({
             info: "#000000",
             order: "#000000",
             messange: "#E81D1C"
+        })
+        setKabinetCom({
+            info: "none",
+            order: "none",
+            messange: "KabinetMessange"
         })
     }
 

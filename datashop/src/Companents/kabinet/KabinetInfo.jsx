@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function KabinetInfo() {
+export default function KabinetInfo({kabinetCom}) {
     return (
-        <div className='KabinetInfo'>
+        <div className={kabinetCom.info}>
             <div className="blockInputs">
                 <h1>Информация о пользователе</h1>
                 <div className="lnputs">
@@ -52,7 +52,13 @@ export default function KabinetInfo() {
                     </div>
                     <div className="inputTitle">
                         <p>Город</p>
-                        <input type="text" placeholder='Фамилия' className='smallWidth' />
+                        <select name="" id="" className='smallWidth'>
+                            <option value="">Xorazm</option>
+                            <option value="">Xonqa</option>
+                            <option value="">Yangi Ariq</option>
+                            <option value="">Shovot</option>
+                            <option value="">Qo'shkopir</option>
+                        </select>
                     </div>
                     <div className="inputTitle">
                         <p>Полный адрес</p>
@@ -60,6 +66,7 @@ export default function KabinetInfo() {
                     </div>
                 </div>
             </div>
+            <button>Сохранить</button>
         </div>
     )
 }
