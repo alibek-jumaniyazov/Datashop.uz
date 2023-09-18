@@ -10,6 +10,7 @@ import './styles/product.css'
 import './styles/admin.css'
 import './styles/user.css'
 import './styles/karzinka.css'
+import './styles/order.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

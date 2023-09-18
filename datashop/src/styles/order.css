@@ -1,0 +1,19 @@
+.Order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.orderBoxes{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+}
+.orderBox{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+}
