@@ -80,8 +80,8 @@ export default function Register({ registerClass, setRegister, setLogikn, setVer
 
         const RequestRegister = async () => {
             try {
-                const response = await axios.post("http://localhost:9060/api/v1/auth/register", body)
-                localStorage.setItem('verifyId', JSON.stringify(response.data.verificationId))
+                const response = await axios.post("http://faveo.uz:9060/api/v1/auth/register", body)
+                localStorage.setItem('verifyId', JSON.stringify(response.data))
                 console.log(response.data);
                 setVerify('blockPage')
                 setRegister('none')

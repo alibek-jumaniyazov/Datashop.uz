@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../../images/icons/logo.svg'
 import cardShop from '../../images/icons/cardShop.svg'
 import heart from '../../images/icons/heart.svg'
@@ -10,10 +10,12 @@ import iconCategory from '../../images/icons/categoryIcon.svg'
 import xIcon from '../../images/icons/x.svg'
 import { Link } from 'react-router-dom'
 
-export default function HeaderComponent( {addREgister} ) {
+export default function HeaderComponent({ addREgister }) {
 
     const [categoryClass, setCategoriClass] = useState("noneCategory")
     const [categoryIcon, setCategoryIcon] = useState(iconCategory)
+
+
 
     function categoryOpen() {
         if (categoryClass == 'noneCategory') {
@@ -52,14 +54,34 @@ export default function HeaderComponent( {addREgister} ) {
                             onClick={() => addREgister()}
                         >
                             <img src={userr} alt="" />
-                            <span>
-                                {
-                                    user ?
-                                        user.user.name
-                                        :
-                                       "Профиль"
-                                }
-                            </span>
+                            {
+                                user ?
+
+                                    <Link to='kabinet'>
+                                        <span>
+
+                                            {
+                                                user ?
+                                                    user.user.name
+                                                    :
+                                                    "Профиль"
+                                            }
+                                        </span>
+                                    </Link>
+
+                                    :
+
+                                    <span>
+                                        <img src={userr} alt="" />
+                                        {
+                                            user ?
+                                                user.user.name
+                                                :
+                                                "Профиль"
+                                        }
+                                    </span>
+                            }
+
                         </div>
                     </div>
                 </div>

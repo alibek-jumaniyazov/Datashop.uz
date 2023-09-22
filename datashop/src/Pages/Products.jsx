@@ -1,30 +1,25 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Product from '../Companents/product/Product'
 import ProductsName from '../Companents/product/ProductsName'
 import { UserContext } from '../Context/UserContext'
 
-export default function Products() {
 
-  const { category, product ,aaa ,setAAA } = useContext(UserContext)
+export default function Products({addProduct}) {
 
-  function addInfo(id,img,description, price) {
-    setAAA([
-      {
-          id: id,
-          img: img,
-          description: description,
-          price: price,
-      }
-  ])
+  const { category, fakeProduct ,stateContex ,setState } = useContext(UserContext)
+
+  function addInfo(id , image ,description , price){
+    addProduct(id , image , description ,price)
   }
+
 
   return (
     <div className='Products'>
       <ProductsName />
       <div className="allProducts">
         {
-          product.map((item, index) => (
-            <Product item={item} key={index} addInfo={addInfo} setAAA={setAAA}/>
+          fakeProduct.slice(0,10).map((item, index) => (
+            <Product item={item} key={index} addInfo={addInfo}/>
           ))
         }
       </div>

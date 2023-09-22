@@ -1,7 +1,7 @@
 import React from 'react'
 import KarzinkaProduct from '../Companents/karzinka/KarzinkaProduct'
 
-export default function Karzinka() {
+export default function Karzinka({addKazinka}) {
   return (
     <div className='Karzinka'>
       <p className='titlePage'>Главная  /  Корзина  </p>
@@ -18,15 +18,11 @@ export default function Karzinka() {
               <p>Цена</p>
             </div>
             <div className="KarzinkaProducts">
-              <KarzinkaProduct />
-              <KarzinkaProduct />
-              <KarzinkaProduct />
-              <KarzinkaProduct />
-              <KarzinkaProduct />
-              <KarzinkaProduct />
-              <KarzinkaProduct />
-              <KarzinkaProduct />
-              <KarzinkaProduct />
+              {
+                addKazinka.map((item) => (
+                  <KarzinkaProduct item={item}/>
+                ))
+              }
             </div>
           </div>
         </div>

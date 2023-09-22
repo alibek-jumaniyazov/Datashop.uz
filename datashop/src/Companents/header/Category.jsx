@@ -5,6 +5,10 @@ export default function Category({ categoryClass }) {
     
        
     const { category , product} = useContext(UserContext)
+
+
+    console.log(category);
+    
     
     
      

@@ -1,9 +1,9 @@
 import React from 'react'
 import img from '../../images/notebook.png'
 import { Link } from 'react-router-dom'
-export default function Product({ item , addInfo }) {
+export default function Product({ item ,addInfo }) {
 
-    // console.log(item);
+    console.log(item);
 
     
 
@@ -12,10 +12,11 @@ export default function Product({ item , addInfo }) {
         <div className="servicess" >
             <div className="laptop">
                 <div className="content">
-                    <Link to='product' onClick={() => addInfo(item.id , `http://localhost:9060/upload/${item.image}` , item.description ,item.price)}>
+                    <Link to='product' onClick={() => addInfo(item.id , item.image , item.description ,item.price)}>
                         <div className="inner">
                             <div className="laptopImg" >
-                                <img src={`http://localhost:9060/upload/${item.image}`} alt="" />
+                                {/* <img src={`http://localhost:9060/upload/${item.image}`} alt="" /> */}
+                                <img src={item.image} alt="" />
                             </div>
                             <div className="laptopInfo">
                                 <span className='lapName'>{item.description}</span>

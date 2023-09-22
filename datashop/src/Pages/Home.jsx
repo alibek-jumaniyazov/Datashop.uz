@@ -15,11 +15,21 @@ import LogosCarusel from '../Companents/home/LogosCarusel'
 import AksesuarName from '../Companents/home/AksesuarName'
 import { UserContext } from '../Context/UserContext'
 import AksesuarImg from '../Companents/home/AksesuarImg'
-export default function Home() {
+export default function Home({setPage}) {
 
 
   const {category , product} = useContext(UserContext)
 
+  function addProduct(id , image , description , price){
+    setPage([
+      {
+        id:id,
+        image:image,
+        description:description,
+        price:price
+      }
+    ])
+  }
 
   return (
     <div className='Home'>
@@ -31,7 +41,7 @@ export default function Home() {
           ))
         }
       </div>
-      <Products />
+      <Products addProduct={addProduct}/>
       <Products />
       <AksesuarName />
       <LogosCarusel />

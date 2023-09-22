@@ -15,18 +15,20 @@ import Order from './Pages/Order'
 
 function App() {
   const navigate = useNavigate();
+  
+  const [page , setPage] = useState([])
+  const [addKazinka , setAddKarzinka] = useState([])
 
   return (
     <UserProvider>
       <div className='App'>
         <Header />
-        
         <div className="fakeHeader"></div>
         <div className="container">
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/product' element={<ProductInfo />} />
-            <Route path='/savat' element={<Karzinka />} />
+            <Route path='/' element={<Home setPage={setPage}/>} />
+            <Route path='/product' element={<ProductInfo page={page} setAddKarzinka={setAddKarzinka}/>} />
+            <Route path='/savat' element={<Karzinka addKazinka={addKazinka}/>} />
             <Route path='/kabinet' element={<Kabinet />} />
             <Route path='/order' element={<Order />} />
           </Routes>

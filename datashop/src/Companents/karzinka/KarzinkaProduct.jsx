@@ -1,14 +1,14 @@
 import React from 'react'
 import img1 from '../../images/krProduct.png'
 
-export default function KarzinkaProduct() {
+export default function KarzinkaProduct({item}) {
     return (
         <div className='KarzinkaProduct'>
             <div className="karzinkaProductImg">
-                <img src={img1} alt="" />
+                <img src={item.image} alt="" />
                 <div className="karzinkaProductInfos">
-                    <h5>HP Victus 15 RTX 3050...</h5>
-                    <p>Ноутбук</p>
+                    <h5>{item.description}</h5>
+                    <p>{item.type}</p>
                     <span>Удалить</span>
                 </div>
             </div>
@@ -19,7 +19,7 @@ export default function KarzinkaProduct() {
                 </div>
             <div className="krProductCounterPrice">
                 
-                <p className="krProductPrice">6 800 000 СУМ</p>
+                <p className="krProductPrice">{item.price} UZS</p>
             </div>
 
         </div>
