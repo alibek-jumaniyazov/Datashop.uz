@@ -4,6 +4,7 @@ import HeaderComponent from './HeaderComponent'
 import Register from '../../Pages/Authorization/Register'
 import Login from '../../Pages/Authorization/Login'
 import Verify from '../../Pages/Authorization/Verify'
+import MobilKatalog from './MobilKatalog'
 export default function Header() {
 
   const [registerClass, setRegister] = useState('none')
@@ -21,12 +22,16 @@ export default function Header() {
   }
 
   return (
+    <>
     <div className='Header'>
       <Navbar />
       <HeaderComponent addREgister={addREgister} />
       <Register registerClass={registerClass} setRegister={setRegister}  setLogikn={setLogikn} setVerify={setVerify} />
       <Login loginClass={loginClass} setLogikn={setLogikn}  setRegister={setRegister} setVerify={setVerify} />
       <Verify verifyClass={verifyClass} setVerify={setVerify} setRegister={setRegister}  setLogikn={setLogikn} />
+      <MobilKatalog addREgister={addREgister}/> 
     </div>
+
+    </>
   )
 }

@@ -12,7 +12,7 @@ export default function Product({ item ,addInfo }) {
         <div className="servicess" >
             <div className="laptop">
                 <div className="content">
-                    <Link to='product' onClick={() => addInfo(item.id , item.image , item.description ,item.price)}>
+                    <Link to='product' onClick={() => addInfo(item.id , item.image , item.description ,item.price , item.type)}>
                         <div className="inner">
                             <div className="laptopImg" >
                                 {/* <img src={`http://localhost:9060/upload/${item.image}`} alt="" /> */}

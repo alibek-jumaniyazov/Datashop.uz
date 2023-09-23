@@ -8,8 +8,8 @@ export default function Products({addProduct}) {
 
   const { category, fakeProduct ,stateContex ,setState } = useContext(UserContext)
 
-  function addInfo(id , image ,description , price){
-    addProduct(id , image , description ,price)
+  function addInfo(id , image ,description , price , type){
+    addProduct(id , image , description ,price, type)
   }
 
 

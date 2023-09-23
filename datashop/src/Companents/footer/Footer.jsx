@@ -5,24 +5,66 @@ export default function Footer() {
     return (
         <div className='Footer'>
             <div className="footerContainer">
-
-                <div className="footerInfo">
-                    <img src={logo} alt="" className="logo" />
-                    <div className="footerinfoName">
-                        <span>Телефон поддержки</span>
-                        <p>+998 (99) 999 01 00</p>
-                    </div>
-                    <div className="footerinfoName">
-                        <span>Адрес</span>
-                        <p>Даритал, Ургенч</p>
-                    </div>
-                    <div className="footerinfoName">
-                        <span>Email</span>
-                        <p>datashop@gmail.com</p>
+                <div className="CompFooter">
+                    <div className="footerInfo">
+                        <img src={logo} alt="" className="logo" />
+                        <div className="footerinfoName">
+                            <span>Телефон поддержки</span>
+                            <p>+998 (99) 999 01 00</p>
+                        </div>
+                        <div className="footerinfoName">
+                            <span>Адрес</span>
+                            <p>Даритал, Ургенч</p>
+                        </div>
+                        <div className="footerinfoName">
+                            <span>Email</span>
+                            <p>datashop@gmail.com</p>
+                        </div>
                     </div>
                 </div>
-                
-                <div className="footerInfos">
+
+                <div className="CompFooter">
+                    <div className="footerInfos">
+                        <div className="footerInfo">
+                            <p>О компании</p>
+                            <p>Вакансии</p>
+                            <p>Возврат и обмен товара</p>
+                            <p>Условия рассрочки</p>
+                            <p>Помощь</p>
+                            <p>Доставка</p>
+                        </div>
+
+                        <div className="footerInfo">
+                            <p>О компании</p>
+                            <p>Вакансии</p>
+                            <p>Возврат и обмен товара</p>
+                            <p>Условия рассрочки</p>
+                            <p>Помощь</p>
+                            <p>Доставка</p>
+                        </div>
+
+                        <div className="footerInfo">
+                            <p>Способы оплаты</p>
+                            <div className="footerOplataInfo">
+                                <div className="opataName">
+                                    <img src={uzcard} alt="" />
+                                </div>
+                                <div className="opataName">
+                                    <img src={uzcard} alt="" />
+                                </div>
+                                <div className="opataName">
+                                    <img src={uzcard} alt="" />
+                                </div>
+                                <div className="opataName">
+                                    <img src={uzcard} alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src={logo} alt="" className="logo mobilLogo" />
+
+                <div className="MobilFooter">
                     <div className="footerInfo">
                         <p>О компании</p>
                         <p>Вакансии</p>
@@ -40,7 +82,23 @@ export default function Footer() {
                         <p>Помощь</p>
                         <p>Доставка</p>
                     </div>
-                   
+                </div>
+
+                <div className="MobilFooter">
+                    <div className="footerInfo">
+                        <div className="footerinfoName">
+                            <span>Телефон поддержки</span>
+                            <p>+998 (99) 999 01 00</p>
+                        </div>
+                        <div className="footerinfoName">
+                            <span>Адрес</span>
+                            <p>Даритал, Ургенч</p>
+                        </div>
+                        <div className="footerinfoName">
+                            <span>Email</span>
+                            <p>datashop@gmail.com</p>
+                        </div>
+                    </div>
                     <div className="footerInfo">
                         <p>Способы оплаты</p>
                         <div className="footerOplataInfo">

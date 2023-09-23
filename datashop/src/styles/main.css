@@ -3,7 +3,6 @@
 
 .Banners img {
     position: relative;
-    z-index: 1 !important;
     margin: 20px auto;
 }
 
@@ -127,4 +126,36 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+}
+
+@media screen and (max-width : 414px) and (min-width: 360px) {
+    .carousel {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        margin-top: 20px;
+    }
+    .carousel-item img{
+        height: 190px;
+        border-radius: 10px;
+    }
+    .Boxes {
+        width: 100%;
+        height: 120px;
+        border-radius: 12px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        z-index: 9;
+        margin-top: -50px;
+        align-items: center;
+        background: rgb(96, 178, 255);
+        background: linear-gradient(0deg, rgba(41, 90, 185, 1) 0%, rgba(96, 178, 255, 1) 100%);
+    }
+    
+    .Boxes img {
+        width: 130px;
+        margin-right: -10px;
+        z-index: 1;
+    }
 }

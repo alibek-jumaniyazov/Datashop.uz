@@ -64,14 +64,15 @@ export default function ProductInfo({ page ,setAddKarzinka}) {
         })
     }
 
-    function addKArzinka(id ,description,image,price){
+    function addKArzinka(id ,description,image,price, type){
         setAddKarzinka(value => ([
             ...value,
             {
                 id:id,
                 description:description,
                 image:image,
-                price:price
+                price:price,
+                type:type
             }
         ]))
     }

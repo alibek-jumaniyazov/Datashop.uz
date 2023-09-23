@@ -82,7 +82,8 @@
     top: 0;
     z-index: 999;
 }
-.fakeHeader{
+
+.fakeHeader {
     width: 100%;
     height: 95px;
     background-color: #FFFFFF;
@@ -115,6 +116,7 @@
 }
 
 .Header .headerConpanents .userProductsinfo .userInfoProduct {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,6 +137,20 @@
     font-weight: 600;
     line-height: 17px;
     color: #000000;
+}
+
+.Header .headerConpanents .userProductsinfo .userInfoProduct .productNumber {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 5px;
+    background-color: #E81D1C;
+    border-radius: 50%;
+    color: white;
+    font-size: 10px;
 }
 
 /* KategoriBtn styles */
@@ -205,7 +221,7 @@
     position: absolute;
     top: 95px;
     opacity: 1;
-    z-index: 50!important  ;
+    z-index: 50 !important;
     transition: all 0.4s ease;
     padding: 15px;
 }
@@ -252,7 +268,7 @@
     transition: all 0.4s ease;
     cursor: pointer;
     color: #666363;
-        border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
@@ -271,9 +287,8 @@
     align-items: center;
     gap: 18px;
 }
-.categoryContainer .categoryNames .categoryName .categoryNameIcon span{
 
-}
+.categoryContainer .categoryNames .categoryName .categoryNameIcon span {}
 
 ::-webkit-scrollbar {
     width: 0;
@@ -314,4 +329,207 @@
     font-weight: 400;
     line-height: 17px;
     color: #666363;
+}
+
+.MobilHeader {
+    display: none;
+}
+
+.MobilKatalog {
+    display: none;
+}
+
+@media screen and (max-width : 414px) and (min-width: 360px) {
+    .Navbar {
+        display: none;
+    }
+
+    .headerConpanents {
+        display: none;
+    }
+
+    .Header {
+        position: relative;
+        width: 100%;
+        -webkit-box-shadow: 0px 10px 54px -17px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 0px 10px 54px -17px rgba(34, 60, 80, 0.2);
+        box-shadow: 0px 10px 54px -17px rgba(34, 60, 80, 0.2);
+        position: fixed;
+        z-index: 999;
+    }
+
+    .MobilKatalog {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        z-index: 99 !important;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 67px;
+        background: #E81D1C;
+        box-shadow: 0px -1px 3px 0px #00000033;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+
+    }
+
+    .KatalogPage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .KatalogPage p {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+        letter-spacing: 0em;
+        color: white;
+        letter-spacing: 1px;
+    }
+
+    .MobilHeader {
+        display: flex;
+        position: relative;
+        width: 100%;
+        background-color: #FFFFFF;
+        z-index: 100;
+        padding: 10px;
+
+    }
+
+    .MobilHeader_Container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .KategoriBtn span {
+        display: none;
+    }
+
+    .KategoriBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #E81D1C;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        width: 50px;
+        height: 40px;
+        border-radius: 6px;
+
+    }
+
+    .KategoriBtn img {
+        width: 40%;
+    }
+
+    .mobilHeader_logoLanguages {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mobilHeader_logoLanguages img {
+        width: 92%;
+    }
+
+    .mobilHeader_KategoriSearch {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .fakeHeader {
+        width: 100%;
+        background-color: #FFFFFF;
+        z-index: 0;
+    }
+
+    .Search {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0;
+        width: 100% !important;
+        height: 40px;
+        border: 1px solid #ACACAC;
+        border-radius: 6px;
+
+    }
+
+    .Search input {
+        border: none;
+        outline: none;
+        width: 100%;
+    }
+
+    .Search .serarchIcon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+        height: 40px;
+        background: #E81D1C;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+    .Search .serarchIcon img {
+        width: 19px;
+    }
+
+    .navTelRegion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .navMobile {
+        gap: 10px;
+    }
+
+    .navMobile img {
+        width: 22px;
+        margin-right: -10px;
+    }
+
+    .navMobile svg {
+        margin-right: 10px;
+    }
+
+    .navTelRegion select {
+        border: none;
+        background: transparent;
+        outline: none;
+        color: #000000;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 15px;
+
+    }
+
+    .navTelRegion select option {
+        border: none;
+        background: transparent;
+        outline: none;
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px;
+        background-color: black;
+    }
+
 }
