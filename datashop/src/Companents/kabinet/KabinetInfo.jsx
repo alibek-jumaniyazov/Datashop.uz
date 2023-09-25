@@ -1,47 +1,40 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import Logout from '../../Pages/Authorization/Logout';
+import axios from 'axios';
 
 export default function KabinetInfo({ kabinetCom }) {
-  const [user, setUser] = useState({
-    phoneNumber: '',
-    name: '',
-    surname: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    region: 'Urganch', // Avvalgi regionni o'rnating
-    city: 'Xorazm', // Avvalgi shaharni o'rnating
-    fullAddress: '',
-  });
+  const verificationIdFromLocalStorage = JSON.parse(localStorage.getItem('user'));
 
-  const verificationIdFromLocalStorage = JSON.parse(localStorage.getItem('verifyId'));
+  const phoneNumberRef = useRef();
+  const nameRef = useRef();
+  const surnameRef = useRef();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const fullAddressRef = useRef();
 
-  useEffect(() => {
-    if (verificationIdFromLocalStorage && verificationIdFromLocalStorage.user) {
-      setUser(verificationIdFromLocalStorage.user);
+
+  const handleSave = async () => {
+  const body = {
+    name: nameRef.current.value,
+    surname: surnameRef.current.value,
+    phone: phoneNumberRef.current.value,
+    email: emailRef.current.value,
+    address: fullAddressRef.current.value,
+    password: "12345678"
+  }
+    console.log(body);
+    try {
+      const response = await axios.put(`http://localhost:9060/api/v1/user/${verificationIdFromLocalStorage.user.id}`, body, {
+        headers: {
+          Authorization: "Bearer " + verificationIdFromLocalStorage.token,
+        }
+      });
+      console.log(response.data);
+    } catch (err) {
+      console.log(err);
     }
-  }, []);
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setUser((prevUser) => ({
-      ...prevUser,
-      [name]: value,
-    }));
   };
 
-  const handleSelectChange = (event) => {
-    const { name, value } = event.target;
-    setUser((prevUser) => ({
-      ...prevUser,
-      [name]: value,
-    }));
-  };
-
-  const handleSave = () => {
-    // Ma'lumotlarni yuborishni ushbu funksiya orqali amalga oshiring
-    // Misol uchun axios yoki fetch ishlatishingiz mumkin
-    console.log('Saqlash kerak bo\'lgan ma\'lumotlar:', user);
-  };
 
   return (
     <div className={kabinetCom.info}>
@@ -53,10 +46,10 @@ export default function KabinetInfo({ kabinetCom }) {
             <input
               type="text"
               name="phoneNumber"
-              value={user.phoneNumber}
+              defaultValue={verificationIdFromLocalStorage.user.phone}
+              ref={phoneNumberRef} // Ref ni inputga bog'lash
               placeholder="Телефон номер"
               className="allWidth"
-              onChange={handleInputChange}
             />
           </div>
           <div className="inputTitle">
@@ -64,10 +57,10 @@ export default function KabinetInfo({ kabinetCom }) {
             <input
               type="text"
               name="name"
-              value={user.name}
+              defaultValue={verificationIdFromLocalStorage.user.name}
+              ref={nameRef} // Ref ni inputga bog'lash
               placeholder="Имя"
               className="smallWidth"
-              onChange={handleInputChange}
             />
           </div>
           <div className="inputTitle">
@@ -75,10 +68,10 @@ export default function KabinetInfo({ kabinetCom }) {
             <input
               type="text"
               name="surname"
-              value={user.surname}
+              defaultValue={verificationIdFromLocalStorage.user.surname}
+              ref={surnameRef} // Ref ni inputga bog'lash
               placeholder="Фамилия"
               className="smallWidth"
-              onChange={handleInputChange}
             />
           </div>
         </div>
@@ -89,12 +82,12 @@ export default function KabinetInfo({ kabinetCom }) {
           <div className="inputTitle">
             <p>Email</p>
             <input
-              type="text"
+              type="email"
               name="email"
-              value={user.email}
+              defaultValue={verificationIdFromLocalStorage.user.email}
+              ref={emailRef} // Ref ni inputga bog'lash
               placeholder="Email"
               className="allWidth"
-              onChange={handleInputChange}
             />
           </div>
           <div className="inputTitle">
@@ -102,21 +95,10 @@ export default function KabinetInfo({ kabinetCom }) {
             <input
               type="password"
               name="password"
-              value={user.password}
+              defaultValue={"12345678"}
+              ref={passwordRef} // Ref ni inputga bog'lash
               placeholder="*********"
               className="smallWidth"
-              onChange={handleInputChange}
-            />
-          </div>
-          <div className="inputTitle">
-            <p>Подтвержедение Пароля</p>
-            <input
-              type="password"
-              name="confirmPassword"
-              value={user.confirmPassword}
-              placeholder="*********"
-              className="smallWidth"
-              onChange={handleInputChange}
             />
           </div>
         </div>
@@ -125,49 +107,20 @@ export default function KabinetInfo({ kabinetCom }) {
         <h1>Адрес доставки</h1>
         <div className="lnputs">
           <div className="inputTitle">
-            <p>Область</p>
-            <select
-              name="region"
-              value={user.region}
-              className="smallWidth"
-              onChange={handleSelectChange}
-            >
-              <option value="Urganch">Urganch</option>
-              <option value="Xonqa">Xonqa</option>
-              <option value="Yangi Ariq">Yangi Ariq</option>
-              <option value="Shovot">Shovot</option>
-              <option value="Qo'shkopir">Qo'shkopir</option>
-            </select>
-          </div>
-          <div className="inputTitle">
-            <p>Город</p>
-            <select
-              name="city"
-              value={user.city}
-              className="smallWidth"
-              onChange={handleSelectChange}
-            >
-              <option value="Xorazm">Xorazm</option>
-              <option value="Xonqa">Xonqa</option>
-              <option value="Yangi Ariq">Yangi Ariq</option>
-              <option value="Shovot">Shovot</option>
-              <option value="Qo'shkopir">Qo'shkopir</option>
-            </select>
-          </div>
-          <div className="inputTitle">
             <p>Полный адрес</p>
             <input
               type="text"
               name="fullAddress"
-              value={user.fullAddress}
+              defaultValue={verificationIdFromLocalStorage.user.address}
+              ref={fullAddressRef} // Ref ni inputga bog'lash
               placeholder="Введите полный адрес"
               className="allWidth"
-              onChange={handleInputChange}
             />
           </div>
         </div>
       </div>
       <button onClick={handleSave}>Сохранить</button>
+      <Logout />
     </div>
   );
 }

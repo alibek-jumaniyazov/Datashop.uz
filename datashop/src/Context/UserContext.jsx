@@ -12,7 +12,7 @@ const UserProvider = ({ children }) => {
     {
       id:1,
       title:'Ноутбуки',
-      image:img2,
+      image: img2,
     }
   ]);
   const [product, setProduct] = useState([]);

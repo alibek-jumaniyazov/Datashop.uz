@@ -41,7 +41,7 @@ const Login = ({ loginClass, setLogikn, setRegister, setVerify }) => {
     // Bu erda API ga ma'lumotlarni yuborish yoki serverga POST qilishni qo'shishingiz mumkin
     const RequestLogin = async () => {
       try {
-        const response = await axios.post("http://faveo.uz:9060/api/v1/auth/login", body)
+        const response = await axios.post("http://localhost:9060/api/v1/auth/login", body)
         localStorage.setItem('user', JSON.stringify(response.data))
         console.log(response.data);
         setVerify('none')
