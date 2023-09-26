@@ -1,41 +1,71 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Logout from '../../Pages/Authorization/Logout';
 import axios from 'axios';
 
 export default function KabinetInfo({ kabinetCom }) {
   const verificationIdFromLocalStorage = JSON.parse(localStorage.getItem('user'));
+  const userPassword = JSON.parse(localStorage.getItem('password'));
 
-  const phoneNumberRef = useRef();
-  const nameRef = useRef();
-  const surnameRef = useRef();
-  const emailRef = useRef();
-  const passwordRef = useRef();
-  const fullAddressRef = useRef();
+  const [user, setUser] = useState({
+    name: verificationIdFromLocalStorage.user.name,
+    surname: verificationIdFromLocalStorage.user.surname,
+    phone: verificationIdFromLocalStorage.user.phone,
+    email: verificationIdFromLocalStorage.user.email,
+    address: verificationIdFromLocalStorage.user.address,
+    password:  userPassword,
+  });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser({
+      ...user,
+      [name]: value,
+    });
+  };
 
   const handleSave = async () => {
-  const body = {
-    name: nameRef.current.value,
-    surname: surnameRef.current.value,
-    phone: phoneNumberRef.current.value,
-    email: emailRef.current.value,
-    address: fullAddressRef.current.value,
-    password: "12345678"
-  }
+    const body = {
+      name: user.name,
+      surname: user.surname,
+      phone: user.phone.toString(),
+      email: user.email,
+      address: user.address,
+      password: user.password,
+    };
+    
+    const url = `http://localhost:9060/api/v1/user/${verificationIdFromLocalStorage.user.id}`
+
+    const token = verificationIdFromLocalStorage.token
+
     console.log(body);
     try {
-      const response = await axios.put(`http://localhost:9060/api/v1/user/${verificationIdFromLocalStorage.user.id}`, body, {
+      const request = await axios.put(url, body, {
         headers: {
-          Authorization: "Bearer " + verificationIdFromLocalStorage.token,
-        }
+          Authorization:  token,
+        },
       });
-      console.log(response.data);
+      console.log(request.data);
+      
+
+      localStorage.setItem('user', JSON.stringify({token: token, user: request.data.user}))
+      localStorage.setItem('password' , JSON.stringify(body.password))
     } catch (err) {
       console.log(err);
     }
   };
 
+  const [inputType, setInputType] = useState('password')
 
+  function openPassword(){
+    if(inputType == 'password'){
+      setInputType('text')
+    }
+    if(inputType == 'text'){
+      setInputType('password')
+    }
+    
+  }
+  
   return (
     <div className={kabinetCom.info}>
       <div className="blockInputs">
@@ -45,22 +75,22 @@ export default function KabinetInfo({ kabinetCom }) {
             <p>Телефон номер</p>
             <input
               type="text"
-              name="phoneNumber"
-              defaultValue={verificationIdFromLocalStorage.user.phone}
-              ref={phoneNumberRef} // Ref ni inputga bog'lash
+              name="phone"
+              value={user.phone}
               placeholder="Телефон номер"
               className="allWidth"
-            />
+              onChange={handleChange}
+            />      
           </div>
           <div className="inputTitle">
             <p>Имя</p>
             <input
               type="text"
               name="name"
-              defaultValue={verificationIdFromLocalStorage.user.name}
-              ref={nameRef} // Ref ni inputga bog'lash
+              value={user.name}
               placeholder="Имя"
               className="smallWidth"
+              onChange={handleChange}
             />
           </div>
           <div className="inputTitle">
@@ -68,10 +98,10 @@ export default function KabinetInfo({ kabinetCom }) {
             <input
               type="text"
               name="surname"
-              defaultValue={verificationIdFromLocalStorage.user.surname}
-              ref={surnameRef} // Ref ni inputga bog'lash
+              value={user.surname}
               placeholder="Фамилия"
               className="smallWidth"
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -84,22 +114,28 @@ export default function KabinetInfo({ kabinetCom }) {
             <input
               type="email"
               name="email"
-              defaultValue={verificationIdFromLocalStorage.user.email}
-              ref={emailRef} // Ref ni inputga bog'lash
+              value={user.email}
               placeholder="Email"
               className="allWidth"
+              onChange={handleChange}
             />
           </div>
           <div className="inputTitle">
             <p>Пароль</p>
-            <input
-              type="password"
+            <div className="inputPassword">
+               <input
+              type={inputType}
               name="password"
-              defaultValue={"12345678"}
-              ref={passwordRef} // Ref ni inputga bog'lash
+              value={user.password}
               placeholder="*********"
               className="smallWidth"
+              onChange={handleChange}
+              
             />
+            <i onClick={() => openPassword()} class="fa-solid fa-eye" style={{color:" #000000;"}}></i>
+            </div>
+           
+            
           </div>
         </div>
       </div>
@@ -110,11 +146,11 @@ export default function KabinetInfo({ kabinetCom }) {
             <p>Полный адрес</p>
             <input
               type="text"
-              name="fullAddress"
-              defaultValue={verificationIdFromLocalStorage.user.address}
-              ref={fullAddressRef} // Ref ni inputga bog'lash
+              name="address"
+              value={user.address}
               placeholder="Введите полный адрес"
               className="allWidth"
+              onChange={handleChange}
             />
           </div>
         </div>

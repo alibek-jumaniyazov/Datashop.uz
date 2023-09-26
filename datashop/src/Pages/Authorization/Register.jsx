@@ -82,6 +82,7 @@ export default function Register({ registerClass, setRegister, setLogikn, setVer
             try {
                 const response = await axios.post("http://localhost:9060/api/v1/auth/register", body)
                 localStorage.setItem('verifyId', JSON.stringify(response.data))
+                localStorage.setItem('password' , JSON.stringify(password))
                 console.log(response.data);
                 setVerify('blockPage')
                 setRegister('none')

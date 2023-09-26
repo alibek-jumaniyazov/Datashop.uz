@@ -43,6 +43,7 @@ const Login = ({ loginClass, setLogikn, setRegister, setVerify }) => {
       try {
         const response = await axios.post("http://localhost:9060/api/v1/auth/login", body)
         localStorage.setItem('user', JSON.stringify(response.data))
+        localStorage.setItem('password', JSON.stringify(password))
         console.log(response.data);
         setVerify('none')
         setRegister('none')
@@ -55,7 +56,17 @@ const Login = ({ loginClass, setLogikn, setRegister, setVerify }) => {
 
     RequestLogin()
   };
+  const [inputType, setInputType] = useState('password')
 
+  function openPassword(){
+    if(inputType == 'password'){
+      setInputType('text')
+    }
+    if(inputType == 'text'){
+      setInputType('password')
+    }
+    
+  }
   return (
     <div className={loginClass}>
       <div className='Register'>
@@ -79,12 +90,14 @@ const Login = ({ loginClass, setLogikn, setRegister, setVerify }) => {
             <div className="registerInput">
               <i className="fa-solid fa-lock" style={{ color: "#85878a" }}></i>
               <input
-                type="password"
+                type={inputType}
                 id="password"
                 value={password}
                 onChange={handlePasswordChange}
                 placeholder='******'
               />
+              <i onClick={() => openPassword()} class="fa-solid fa-eye" style={{ color: " #000000;", border : 'none'}}></i>
+
             </div>
           </div>
           <hr />
