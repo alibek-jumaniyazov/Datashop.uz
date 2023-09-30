@@ -96,7 +96,7 @@ const Login = ({ loginClass, setLogikn, setRegister, setVerify }) => {
                 onChange={handlePasswordChange}
                 placeholder='******'
               />
-              <i onClick={() => openPassword()} class="fa-solid fa-eye" style={{ color: " #000000;", border : 'none'}}></i>
+              <i onClick={() => openPassword()} className="fa-solid fa-eye" style={{ color: " #000000;", border : 'none'}}></i>
 
             </div>
           </div>

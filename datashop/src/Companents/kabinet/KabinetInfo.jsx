@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Logout from '../../Pages/Authorization/Logout';
 import axios from 'axios';
+import Delete from '../../Pages/Authorization/Delete';
 
 export default function KabinetInfo({ kabinetCom }) {
   const verificationIdFromLocalStorage = JSON.parse(localStorage.getItem('user'));
@@ -157,6 +158,7 @@ export default function KabinetInfo({ kabinetCom }) {
       </div>
       <button onClick={handleSave}>Сохранить</button>
       <Logout />
+      <Delete/>
     </div>
   );
 }
