@@ -12,6 +12,7 @@ import Kabinet from './Pages/Kabinet'
 import Order from './Pages/Order'
 import Login from './Pages/Authorization/Login'
 import AdminPage from './AdminPanel/AdminPage'
+import Users from './AdminPanel/Users'
 // import Register from './Pages/Authorization/Register'
 // import Login from './Pages/Authorization/Login'
 
@@ -38,9 +39,6 @@ function App() {
 
   return (
     <UserProvider>
-      <Routes>
-        <Route path='/admin' element={<AdminPage />} />
-      </Routes>
       <div className='App'>
         <Header />
         <div className="fakeHeader"></div>
@@ -51,6 +49,8 @@ function App() {
             <Route path='/savat' element={<Karzinka addKazinka={addKazinka} />} />
             <Route path='/kabinet' element={<Kabinet />} />
             <Route path='/order' element={<Order />} />
+            <Route path='/admin/*' element={<AdminPage />} />
+            <Route path='*' element={<Error />} />
           </Routes>
         </div>
         <Footer />
