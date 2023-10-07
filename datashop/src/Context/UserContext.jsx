@@ -1,6 +1,7 @@
 // UserContext.js
 import React, { createContext, useEffect, useState } from 'react';
-import { getUserData ,  } from './api';
+import { getUserData, } from './api';
+import { getUsers, } from './api';
 import img1 from '../images/laptopa.png'
 import img2 from '../images/laptop.png'
 
@@ -10,125 +11,126 @@ const UserContext = createContext();
 const UserProvider = ({ children }) => {
   const [category, setCategory] = useState([
     {
-      id:1,
-      title:'Ноутбуки',
+      id: 1,
+      title: 'Ноутбуки',
       image: img2,
     }
   ]);
   const [product, setProduct] = useState([]);
-  const [stateContext , setState] = useState([])
-  const [fakeProduct , setFakeProduct] = useState([
+  const [users, setUsers] = useState([]);
+  const [stateContext, setState] = useState([])
+  const [fakeProduct, setFakeProduct] = useState([
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
     {
       id: 1,
       image: img1,
-      description:" HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
-      price: '14.540.000', 
-      type:'Notebook'
+      description: " HP Victus 15 RTX 3050 / i5 12400f / 512 GB SSD..",
+      price: '14.540.000',
+      type: 'Notebook'
     },
   ])
 
@@ -147,14 +149,21 @@ const UserProvider = ({ children }) => {
     // GetProduct();
     // GetApi();
 
-  
+    const GetUsers = async () => {
+      const usersInfo = await getUsers();
+      setUsers(usersInfo.user)
+    }
+
+    GetUsers()
+
   }, []);
 
   const values = {
     category,
     fakeProduct,
-    stateContext , 
-    setState
+    stateContext,
+    setState,
+    users
   };
 
   return (

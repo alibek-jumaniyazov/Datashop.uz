@@ -44,6 +44,7 @@ const Login = ({ loginClass, setLogikn, setRegister, setVerify }) => {
         const response = await axios.post("http://localhost:9060/api/v1/auth/login", body)
         localStorage.setItem('user', JSON.stringify(response.data))
         localStorage.setItem('password', JSON.stringify(password))
+        localStorage.setItem('token', JSON.stringify(response.data.token))
         console.log(response.data);
         setVerify('none')
         setRegister('none')

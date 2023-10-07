@@ -20,3 +20,24 @@ const getUserProduct = async () => {
     }
 };
 export { getUserProduct };
+
+const userToken = JSON.parse(localStorage.getItem('token'))
+console.log(userToken);
+
+
+const getUsers = async () => {
+    try{
+        const response = axios.get("http://localhost:9060/api/v1/user/users",{
+            headers:{
+                Authorization: userToken
+            }
+        })
+       return (await response).data
+    }
+    catch(err){
+        console.log(err);
+        return null
+    }
+}
+
+export {getUsers}

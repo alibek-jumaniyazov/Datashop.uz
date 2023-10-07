@@ -6,13 +6,18 @@ import { Outlet, Route, Routes } from 'react-router-dom'
 import Users from './Users'
 
 export default function AdminPage() {
-   
+
     return (
         <div className='Admin'>
-            <DashboardPages/>
-            <Routes>
-                <Route path='users' element={<Users />} />    
-            </Routes>
+            <div className="DashboardDiv">
+                <DashboardPages />
+            </div>
+            <div className="AdminPages">
+                <Routes>
+                    <Route path='users' element={<Users />} />
+                </Routes>
+            </div>
+
         </div>
     )
 }
