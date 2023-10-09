@@ -41,3 +41,21 @@ const getUsers = async () => {
 }
 
 export {getUsers}
+
+
+// const getUserId = async () => {
+//     try{
+//         const response = axios.get("http://localhost:9060/api/v1/user/:5",{
+//             headers:{
+//                 Authorization: userToken
+//             }
+//         })
+//        return (await response).data
+//     }
+//     catch(err){
+//         console.log(err);
+//         return null
+//     }
+// }
+
+// export {getUserId}

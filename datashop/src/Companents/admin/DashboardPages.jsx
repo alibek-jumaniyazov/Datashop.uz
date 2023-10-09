@@ -1,10 +1,15 @@
 import React from 'react';
 import { Button } from '@chakra-ui/react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import { Badge, Flex, Avatar, Box, Text } from '@chakra-ui/react'
 import logo from '../../images/icons/logo.svg'
 
 export default function DashboardPages() {
+
+  const navigate = useNavigate()
+
+
+
   return (
     <div className='DashboardPages'>
       <div className="LogoRole">
@@ -20,64 +25,64 @@ export default function DashboardPages() {
       </div>
       <div className="Listes">
 
-        <div className="Items">
-          <Link to='users'>
-            <div className="iconTitle">
-              <i class="fa-solid fa-user" ></i>
-              <p>Users</p>
-            </div>
-            <i class="fa-solid fa-chevron-right" ></i>
-          </Link>
+        <div className="Items" onClick={() => navigate('users')}>
+
+          <div className="iconTitle">
+            <i class="fa-solid fa-user" ></i>
+            <p>Users</p>
+          </div>
+          <i class="fa-solid fa-chevron-right" ></i>
+
         </div>
 
-        <div className="Items">
-          <Link to='product'>
-            <div className="iconTitle">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <p>Product</p>
-            </div>
-            <i class="fa-solid fa-chevron-right" ></i>
-          </Link>
+        <div className="Items" onClick={() => navigate('product')}>
+
+          <div className="iconTitle">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>Product</p>
+          </div>
+          <i class="fa-solid fa-chevron-right" ></i>
+
         </div>
 
-        <div className="Items">
-          <Link to='category'>
-            <div className="iconTitle">
-              <i class="fa-solid fa-bars"></i>
-              <p>Category</p>
-            </div>
-            <i class="fa-solid fa-chevron-right" ></i>
-          </Link>
+        <div className="Items" onClick={() => navigate('category')}>
+
+          <div className="iconTitle">
+            <i class="fa-solid fa-bars"></i>
+            <p>Category</p>
+          </div>
+          <i class="fa-solid fa-chevron-right" ></i>
+
         </div>
 
-        <div className="Items">
-          <Link to='users'>
-            <div className="iconTitle">
-              <i class="fa-solid fa-user" ></i>
-              <p>Users</p>
-            </div>
-            <i class="fa-solid fa-chevron-right" ></i>
-          </Link>
+        <div className="Items" onClick={() => navigate('users')}>
+
+          <div className="iconTitle">
+            <i class="fa-solid fa-user" ></i>
+            <p>Users</p>
+          </div>
+          <i class="fa-solid fa-chevron-right" ></i>
+
         </div>
 
-        <div className="Items">
-          <Link to='users'>
-            <div className="iconTitle">
-              <i class="fa-solid fa-user" ></i>
-              <p>Users</p>
-            </div>
-            <i class="fa-solid fa-chevron-right" ></i>
-          </Link>
+        <div className="Items" onClick={() => navigate('users')}>
+
+          <div className="iconTitle">
+            <i class="fa-solid fa-user" ></i>
+            <p>Users</p>
+          </div>
+          <i class="fa-solid fa-chevron-right" ></i>
+
         </div>
 
-        <div className="Items">
-          <Link to='users'>
-            <div className="iconTitle">
-              <i class="fa-solid fa-user" ></i>
-              <p>Users</p>
-            </div>
-            <i class="fa-solid fa-chevron-right" ></i>
-          </Link>
+        <div className="Items" onClick={() => navigate('users')}>
+
+          <div className="iconTitle">
+            <i class="fa-solid fa-user" ></i>
+            <p>Users</p>
+          </div>
+          <i class="fa-solid fa-chevron-right" ></i>
+
         </div>
 
       </div>

@@ -1,6 +1,6 @@
 // UserContext.js
 import React, { createContext, useEffect, useState } from 'react';
-import { getUserData, } from './api';
+import { getUserData } from './api';
 import { getUsers, } from './api';
 import img1 from '../images/laptopa.png'
 import img2 from '../images/laptop.png'
@@ -18,6 +18,7 @@ const UserProvider = ({ children }) => {
   ]);
   const [product, setProduct] = useState([]);
   const [users, setUsers] = useState([]);
+  const [userId, setUserId] = useState([]);
   const [stateContext, setState] = useState([])
   const [fakeProduct, setFakeProduct] = useState([
     {
@@ -153,9 +154,14 @@ const UserProvider = ({ children }) => {
       const usersInfo = await getUsers();
       setUsers(usersInfo.user)
     }
-
     GetUsers()
 
+    // const GetUserId = async () => {
+    //   const usersId = await getUserId();
+    //   setUserId(usersId.user)
+    // }
+
+    // GetUserId()
   }, []);
 
   const values = {
@@ -163,7 +169,8 @@ const UserProvider = ({ children }) => {
     fakeProduct,
     stateContext,
     setState,
-    users
+    users,
+    // userId
   };
 
   return (

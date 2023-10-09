@@ -3,6 +3,8 @@ import { Button, ButtonGroup, Input, InputGroup, InputLeftElement } from '@chakr
 import CreateUser from '../Companents/admin/CreateUser'
 import User from '../Companents/admin/User'
 import { UserContext } from '../Context/UserContext'
+import { Outlet } from 'react-router-dom'
+import UserPage from '../Companents/admin/Users/UserPage'
 export default function Users() {
 
   const { users } = useContext(UserContext);
@@ -18,7 +20,7 @@ export default function Users() {
       ? users.filter((user) =>
         user.name.toLowerCase().includes(term.toLowerCase())
       )
-      : users; // Agar qidiruv so'zi kiritilmagan bo'lsa, barcha foydalanuvchilar qaytarilsin
+      : users; 
     setSearchResults(results);
   };
   useEffect(() => {
@@ -57,17 +59,14 @@ export default function Users() {
           <p className='typePhon'>Phone</p>
           <p className='typeActi'>Actions</p>
         </div>
-        <div className="AllUsers">
+        <div className="AllUsers" >
           {searchResults.length > 0 ? (
-            searchResults.map((item) => <User item={item} />)
+            searchResults.map((item) => <User item={item} key={item.id} />)
           ) : (
             <p>Hech qanday natija topilmadi.</p>
           )}
-
-
         </div>
       </div>
-
     </div>
   )
 }
