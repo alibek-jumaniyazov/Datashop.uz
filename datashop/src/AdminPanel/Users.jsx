@@ -1,12 +1,32 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Button, ButtonGroup, Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 import CreateUser from '../Companents/admin/CreateUser'
 import User from '../Companents/admin/User'
 import { UserContext } from '../Context/UserContext'
 export default function Users() {
 
-  const { users } = useContext(UserContext)
-  console.log(users);
+  const { users } = useContext(UserContext);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+
+
+
+
+
+  const performSearch = (term) => {
+    const results = term
+      ? users.filter((user) =>
+        user.name.toLowerCase().includes(term.toLowerCase())
+      )
+      : users; // Agar qidiruv so'zi kiritilmagan bo'lsa, barcha foydalanuvchilar qaytarilsin
+    setSearchResults(results);
+  };
+  useEffect(() => {
+    performSearch(searchTerm);
+  }, [searchTerm]);
+
+
+
   return (
     <div className='Users'>
       <div className="usersHeader">
@@ -14,11 +34,22 @@ export default function Users() {
         <CreateUser />
       </div>
       <InputGroup>
-        <InputLeftElement pointerEvents='none' >
+        <InputLeftElement pointerEvents='none'>
           <i class="fa-solid fa-magnifying-glass"></i>
         </InputLeftElement>
-        <Input type='text' placeholder='Search User' focusBorderColor='red.500' />
+        <Input
+          type='text'
+          placeholder='Search User'
+          focusBorderColor='red.500'
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <Button onClick={() => performSearch(searchTerm)}>Qidiruv</Button>
       </InputGroup>
+
+
+
+
       <div className="UsersInfo">
         <div className="TypeUsers">
           <p>Id</p>
@@ -27,11 +58,13 @@ export default function Users() {
           <p className='typeActi'>Actions</p>
         </div>
         <div className="AllUsers">
-          {
-            users.map((item) => (
-              <User item={item}/>
-            ))
-          }
+          {searchResults.length > 0 ? (
+            searchResults.map((item) => <User item={item} />)
+          ) : (
+            <p>Hech qanday natija topilmadi.</p>
+          )}
+
+
         </div>
       </div>
 
