@@ -28,7 +28,7 @@ export default function Karzinka({addKazinka}) {
         </div>
         <div className="karzinkaInfoPrice">
           <div className="allPrice">
-            <p>Итого: 766.000 UZS</p>
+            <p>Итого: 0 UZS</p>
           </div>
           <div className="miniPrices">
             <div className="miniPrice">
@@ -37,11 +37,11 @@ export default function Karzinka({addKazinka}) {
             </div>
             <div className="miniPrice">
               <p>Сумма доставки: </p>
-              <span>30.000 сум</span>
+              <span>0 сум</span>
             </div>
             <div className="miniPrice">
               <p>Сумма товара:</p>
-              <span>736.000 сум</span>
+              <span>0 сум</span>
             </div>
           </div>
           <div className="dastavki">
