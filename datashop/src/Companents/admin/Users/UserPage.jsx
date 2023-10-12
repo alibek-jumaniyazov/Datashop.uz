@@ -1,40 +1,26 @@
-import React, {  useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import React, { useContext } from 'react';
+import { Outlet, useParams } from 'react-router-dom';
+import { UserContext } from '../../../Context/UserContext';
 
 export default function UserPage() {
-  const { id } = useParams();
-  const [userData, setUserData] = useState([]);
-  const userToken = JSON.parse(localStorage.getItem('token'))
-  useEffect(() => {
-    const UserInfoId = async () => {
-      try {
-        const response = await axios.get(`http://localhost:9060/api/v1/user/:${id}`, {
-          headers: {
-            Authorization: userToken
-          }
-        });
-        setUserData(response.data.user);
-      } catch (error) {
-        console.error(error);
-      }
-    };
+  const { id } = useParams(); 
 
-    UserInfoId();
-  }, [id]);
-  console.log(userData);
+  const { users } = useContext(UserContext); 
+
+  const user = users.find(user => user.id === id);
+
+  if (!user) {
+    return <p>Foydalanuvchi topilmadi</p>;
+  }
 
   return (
     <div>
-      {userData ? (
-        <div>
-          <h2>Foydalanuvchi ma'lumotlari</h2>
-          <p>Name: {userData.name}</p>
-          {/* Boshqa foydalanuvchi ma'lumotlarini qo'shing */}
-        </div>
-      ) : (
-        <p>Loading...</p>
-      )}
+      <div>
+        <h2>Foydalanuvchi ma'lumotlari</h2>
+        <p>ID: {user.id}</p>
+        <p>Name: {user.name}</p>
+        <p>Phone: {user.phone}</p>
+      </div>
     </div>
   );
 }

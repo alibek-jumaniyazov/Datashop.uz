@@ -1,14 +1,11 @@
-import React, { useContext, useRef, useState } from 'react'
-import { UserContext } from '../Context/UserContext'
-import axios from 'axios'
-import DashboardPages from '../Companents/admin/DashboardPages'
-import { Outlet, Route, Routes } from 'react-router-dom'
-import Users from './Users'
-import UserPage from '../Companents/admin/Users/UserPage'
-import User from '../Companents/admin/User'
+import React from 'react';
+import { Outlet, Route, Routes } from 'react-router-dom';
+import DashboardPages from '../Companents/admin/DashboardPages';
+import Users from './Users';
+import UserPage from '../Companents/admin/Users/UserPage';
+import Error from '../Pages/Error';
 
 export default function AdminPage() {
-
     return (
         <div className='Admin'>
             <div className="DashboardDiv">
@@ -16,11 +13,11 @@ export default function AdminPage() {
             </div>
             <div className="AdminPages">
                 <Routes>
-                    <Route path='users' element={<Users />} />
+                    <Route path='/users' element={<Users />} />
                     <Route path='user/:id' element={<UserPage />} />
+                    <Route path='*' element={<Error />} />
                 </Routes>
             </div>
-
         </div>
-    )
+    );
 }

@@ -1,41 +1,24 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Link, Route, Routes, useNavigate } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import Header from './Companents/header/Header'
 import Footer from './Companents/footer/Footer'
 import Home from './Pages/Home'
-import axios from 'axios';
 import { UserProvider } from './Context/UserContext.jsx'
-import Admin from './AdminPanel/AdminPage'
 import ProductInfo from './Pages/ProductInfo'
 import Karzinka from './Pages/Karzinka'
 import Kabinet from './Pages/Kabinet'
 import Order from './Pages/Order'
-import Login from './Pages/Authorization/Login'
+import Error from './Pages/Error'
 import AdminPage from './AdminPanel/AdminPage'
-import Users from './AdminPanel/Users'
-// import Register from './Pages/Authorization/Register'
-// import Login from './Pages/Authorization/Login'
 
 function App() {
   const navigate = useNavigate();
 
-  const user = JSON.parse(localStorage.getItem('user')) ||
-  {
-    user: {
-      role: 'user'
-    }
-  };
-
-  console.log(user);
+  const user = JSON.parse(localStorage.getItem('user')) || { user: { role: 'user' } };
 
   const [page, setPage] = useState([])
   const [addKazinka, setAddKarzinka] = useState([])
 
-  useEffect(() => {
-    if (user.user.role != 'admin' && user.user.role != 'supervisor') {
-      navigate('/')
-    }
-  }, [])
 
   return (
     <UserProvider>
@@ -49,7 +32,9 @@ function App() {
             <Route path='/savat' element={<Karzinka addKazinka={addKazinka} />} />
             <Route path='/kabinet' element={<Kabinet />} />
             <Route path='/order' element={<Order />} />
-            <Route path='/admin/*' element={<AdminPage />} />
+            {(user.user.role === 'admin' || user.user.role === 'supervisor') && (
+              <Route path='admin/*' element={<AdminPage />} />
+            )}
             <Route path='*' element={<Error />} />
           </Routes>
         </div>

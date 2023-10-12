@@ -65,6 +65,7 @@ export default function Users() {
           ) : (
             <p>Hech qanday natija topilmadi.</p>
           )}
+
         </div>
       </div>
     </div>

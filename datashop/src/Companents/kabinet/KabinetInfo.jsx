@@ -4,6 +4,7 @@ import axios from 'axios';
 import Delete from '../../Pages/Authorization/Delete';
 
 export default function KabinetInfo({ kabinetCom }) {
+  
   const verificationIdFromLocalStorage = JSON.parse(localStorage.getItem('user'));
   const userPassword = JSON.parse(localStorage.getItem('password'));
 
