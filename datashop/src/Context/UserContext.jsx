@@ -14,7 +14,42 @@ const UserProvider = ({ children }) => {
       id: 1,
       title: 'Ноутбуки',
       image: img2,
-    }
+    },
+    {
+      id: 1,
+      title: 'Ноутбуки',
+      image: img2,
+    },
+    {
+      id: 1,
+      title: 'Ноутбуки',
+      image: img2,
+    },
+    {
+      id: 1,
+      title: 'Ноутбуки',
+      image: img2,
+    },
+
+    {
+      id: 1,
+      title: 'Ноутбуки',
+      image: img2,
+    },
+    {
+      id: 1,
+      title: 'Ноутбуки',
+      image: img2,
+    },
+    {
+      id: 1,
+      title: 'Ноутбуки',
+      image: img2,
+    },{
+      id: 1,
+      title: 'Ноутбуки',
+      image: img2,
+    },
   ]);
   const [product, setProduct] = useState([]);
   const [users, setUsers] = useState([]);
