@@ -4,10 +4,8 @@ import { UserContext } from '../../Context/UserContext.jsx'
 export default function Category({ categoryClass }) {
     
        
-    const { category , product} = useContext(UserContext)
+    const { category } = useContext(UserContext)
 
-
-    console.log(category);
     
     
     

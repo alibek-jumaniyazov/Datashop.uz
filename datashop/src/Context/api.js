@@ -1,4 +1,8 @@
 import axios from 'axios';
+
+const userToken = JSON.parse(localStorage.getItem('token'))
+
+
 const getUserData = async () => {
     try {
         const response = axios.get("http://localhost:9060/api/v1/category")
@@ -21,8 +25,6 @@ const getUserProduct = async () => {
 };
 export { getUserProduct };
 
-const userToken = JSON.parse(localStorage.getItem('token'))
-console.log(userToken);
 
 
 const getUsers = async () => {

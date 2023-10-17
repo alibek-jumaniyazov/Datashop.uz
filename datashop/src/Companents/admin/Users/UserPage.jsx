@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import {  Outlet, useParams } from 'react-router-dom';
 import { UserContext } from '../../../Context/UserContext';
 
 export default function UserPage() {
@@ -21,6 +21,8 @@ export default function UserPage() {
         <p>Name: {user.name}</p>
         <p>Phone: {user.phone}</p>
       </div>
+    <Outlet/>
+
     </div>
   );
 }
