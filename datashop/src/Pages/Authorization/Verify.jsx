@@ -38,13 +38,13 @@ export default function Verify({ verifyClass, setVerify, setRegister, setLogikn 
           <h1>Kod yuborildi</h1>
           <p>{verificationIdFromLocalStorage ? verificationIdFromLocalStorage.email : 'Gmail yoq'} shu email pochtaga tasdiqlash kodi yuborildi</p>
           <div className="verifyINput">
-            <i className="fa-regular fa-envelope" style={{ color: "#85878a" }}></i>
+            <i className="fa-regular fa-envelope" ></i>
             <input type='text' value={code} onChange={handleVerifyChange} />
           </div>
 
           <button onClick={RequestVerify}>Send</button>
         </div>
-        <i className="fa-solid fa-x" style={{ color: "#0000000", fontSize: "30px" }} onClick={closeVerify}></i>
+        <i className="fa-solid fa-x"  onClick={closeVerify}></i>
       </div>
     </div>
   );

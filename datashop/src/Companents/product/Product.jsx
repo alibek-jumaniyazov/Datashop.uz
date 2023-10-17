@@ -3,11 +3,6 @@ import img from '../../images/notebook.png'
 import { Link } from 'react-router-dom'
 export default function Product({ item ,addInfo }) {
 
-    console.log(item);
-
-    
-
-
     return (
         <div className="servicess" >
             <div className="laptop">

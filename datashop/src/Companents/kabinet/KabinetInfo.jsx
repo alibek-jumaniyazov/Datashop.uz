@@ -4,7 +4,7 @@ import axios from 'axios';
 import Delete from '../../Pages/Authorization/Delete';
 
 export default function KabinetInfo({ kabinetCom }) {
-  
+
   const verificationIdFromLocalStorage = JSON.parse(localStorage.getItem('user'));
   const userPassword = JSON.parse(localStorage.getItem('password'));
 
@@ -14,7 +14,7 @@ export default function KabinetInfo({ kabinetCom }) {
     phone: verificationIdFromLocalStorage.user.phone,
     email: verificationIdFromLocalStorage.user.email,
     address: verificationIdFromLocalStorage.user.address,
-    password:  userPassword,
+    password: userPassword,
   });
 
   const handleChange = (e) => {
@@ -34,7 +34,7 @@ export default function KabinetInfo({ kabinetCom }) {
       address: user.address,
       password: user.password,
     };
-    
+
     const url = `http://localhost:9060/api/v1/user/${verificationIdFromLocalStorage.user.id}`
 
     const token = verificationIdFromLocalStorage.token
@@ -43,14 +43,14 @@ export default function KabinetInfo({ kabinetCom }) {
     try {
       const request = await axios.put(url, body, {
         headers: {
-          Authorization:  token,
+          Authorization: token,
         },
       });
       console.log(request.data);
-      
 
-      localStorage.setItem('user', JSON.stringify({token: token, user: request.data.user}))
-      localStorage.setItem('password' , JSON.stringify(body.password))
+
+      localStorage.setItem('user', JSON.stringify({ token: token, user: request.data.user }))
+      localStorage.setItem('password', JSON.stringify(body.password))
     } catch (err) {
       console.log(err);
     }
@@ -58,16 +58,16 @@ export default function KabinetInfo({ kabinetCom }) {
 
   const [inputType, setInputType] = useState('password')
 
-  function openPassword(){
-    if(inputType == 'password'){
+  function openPassword() {
+    if (inputType == 'password') {
       setInputType('text')
     }
-    if(inputType == 'text'){
+    if (inputType == 'text') {
       setInputType('password')
     }
-    
+
   }
-  
+
   return (
     <div className={kabinetCom.info}>
       <div className="blockInputs">
@@ -82,7 +82,7 @@ export default function KabinetInfo({ kabinetCom }) {
               placeholder="Телефон номер"
               className="allWidth"
               onChange={handleChange}
-            />      
+            />
           </div>
           <div className="inputTitle">
             <p>Имя</p>
@@ -125,19 +125,19 @@ export default function KabinetInfo({ kabinetCom }) {
           <div className="inputTitle">
             <p>Пароль</p>
             <div className="inputPassword">
-               <input
-              type={inputType}
-              name="password"
-              value={user.password}
-              placeholder="*********"
-              className="smallWidth"
-              onChange={handleChange}
-              
-            />
-            <i onClick={() => openPassword()} class="fa-solid fa-eye" style={{color:" #000000;"}}></i>
+              <input
+                type={inputType}
+                name="password"
+                value={user.password}
+                placeholder="*********"
+                className="smallWidth"
+                onChange={handleChange}
+
+              />
+              <i onClick={() => openPassword()} className="fa-solid fa-eye" ></i>
             </div>
-           
-            
+
+
           </div>
         </div>
       </div>
@@ -159,7 +159,7 @@ export default function KabinetInfo({ kabinetCom }) {
       </div>
       <button onClick={handleSave}>Сохранить</button>
       <Logout />
-      <Delete/>
+      <Delete />
     </div>
   );
 }

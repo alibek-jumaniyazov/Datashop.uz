@@ -82,7 +82,7 @@ export default function Register({ registerClass, setRegister, setLogikn, setVer
             try {
                 const response = await axios.post("http://localhost:9060/api/v1/auth/register", body)
                 localStorage.setItem('verifyId', JSON.stringify(response.data))
-                localStorage.setItem('password' , JSON.stringify(password))
+                localStorage.setItem('password', JSON.stringify(password))
                 console.log(response.data);
                 setVerify('blockPage')
                 setRegister('none')
@@ -113,7 +113,7 @@ export default function Register({ registerClass, setRegister, setLogikn, setVer
                     <div className='inputFrom'>
                         <label htmlFor="name" >Ism</label>
                         <div className="registerInput">
-                            <i className="fa-regular fa-user" style={{ color: "#85878a" }}></i>
+                            <i className="fa-regular fa-user" ></i>
                             <input
                                 type="text"
                                 id="name"
@@ -128,7 +128,7 @@ export default function Register({ registerClass, setRegister, setLogikn, setVer
                     <div className='inputFrom'>
                         <label htmlFor="surname" >Familya</label>
                         <div className="registerInput">
-                            <i className="fa-regular fa-user" style={{ color: "#85878a" }}></i>
+                            <i className="fa-regular fa-user" ></i>
                             <input
                                 type="text"
                                 id="surname"
@@ -143,7 +143,7 @@ export default function Register({ registerClass, setRegister, setLogikn, setVer
                     <div className='inputFrom'>
                         <label htmlFor="phone" >Telefon</label>
                         <div className="registerInput">
-                            <i className="fa-regular fa-user" style={{ color: "#85878a" }}></i>
+                            <i className="fa-regular fa-user" ></i>
                             <input
                                 type="tel"
                                 id="phone"
@@ -159,7 +159,7 @@ export default function Register({ registerClass, setRegister, setLogikn, setVer
                     <div className='inputFrom'>
                         <label htmlFor="email">Email</label>
                         <div className="registerInput">
-                            <i className="fa-regular fa-envelope" style={{ color: "#85878a" }}></i>
+                            <i className="fa-regular fa-envelope" ></i>
                             <input
                                 type="email"
                                 id="email"
@@ -173,7 +173,7 @@ export default function Register({ registerClass, setRegister, setLogikn, setVer
                     <div className='inputFrom'>
                         <label htmlFor="address">Addres</label>
                         <div className="registerInput">
-                            <i className="fa-regular fa-envelope" style={{ color: "#85878a" }}></i>
+                            <i className="fa-regular fa-envelope" ></i>
                             <input
                                 type="text"
                                 id="address"
@@ -189,7 +189,7 @@ export default function Register({ registerClass, setRegister, setLogikn, setVer
                     <div className='inputFrom'>
                         <label htmlFor="password">Parol</label>
                         <div className="registerInput">
-                            <i className="fa-solid fa-lock" style={{ color: "#85878a" }}></i>
+                            <i className="fa-solid fa-lock" ></i>
                             <input
                                 type="password"
                                 id="password"
@@ -203,7 +203,7 @@ export default function Register({ registerClass, setRegister, setLogikn, setVer
                     <p className='loginAddPageText'>У меня есть аккаунт <a href="#" onClick={() => openLogin()}>Login</a> </p>
                     <button type="submit" onClick={() => openVerify()}>Ro'yhatdan o'tish</button>
                 </form>
-            <i className="fa-solid fa-x" style={{ color: "#0000000", fontSize: "30ppx" }} onClick={() => closeRegister()}></i>
+                <i className="fa-solid fa-x" onClick={() => closeRegister()}></i>
 
             </div>
         </div>

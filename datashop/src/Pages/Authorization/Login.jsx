@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 
-const Login = ({ loginClass, setLogikn, setRegister, setVerify }) => {
+const Login = ({loginClass, setLogikn, setRegister, setVerify}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -76,7 +76,7 @@ const Login = ({ loginClass, setLogikn, setRegister, setVerify }) => {
           <div className='inputFrom'>
             <label htmlFor="email">Name</label>
             <div className="registerInput">
-              <i className="fa-regular fa-user" style={{ color: "#85878a" }}></i>
+              <i className="fa-regular fa-user"></i>
               <input
                 type="email"
                 id="email"
@@ -89,7 +89,7 @@ const Login = ({ loginClass, setLogikn, setRegister, setVerify }) => {
           <div className='inputFrom'>
             <label htmlFor="password">Parol</label>
             <div className="registerInput">
-              <i className="fa-solid fa-lock" style={{ color: "#85878a" }}></i>
+              <i className="fa-solid fa-lock"></i>
               <input
                 type={inputType}
                 id="password"
@@ -97,7 +97,7 @@ const Login = ({ loginClass, setLogikn, setRegister, setVerify }) => {
                 onChange={handlePasswordChange}
                 placeholder='******'
               />
-              <i onClick={() => openPassword()} className="fa-solid fa-eye" style={{ color: " #000000;", border : 'none'}}></i>
+              <i onClick={() => openPassword()} className="fa-solid fa-eye" ></i>
 
             </div>
           </div>
@@ -105,7 +105,7 @@ const Login = ({ loginClass, setLogikn, setRegister, setVerify }) => {
           <p className='loginAddPageText'>Ro'yhatdan o'tmaganmisiz? <span href="" onClick={() => openReg()}>Ro'yhatdan o'ting</span> </p>
           <button type="submit">Kirish</button>
         </form>
-        <i className="fa-solid fa-x" style={{ color: "#0000000", fontSize: "30ppx" }} onClick={() => closeLogin()}></i>
+        <i className="fa-solid fa-x"  onClick={() => closeLogin()}></i>
       </div>
     </div>
   )

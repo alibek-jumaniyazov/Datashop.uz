@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <>
     <div className='Header'>
-      <Navbar />
+      <Navbar/>
       <HeaderComponent addREgister={addREgister} />
       <Register registerClass={registerClass} setRegister={setRegister}  setLogikn={setLogikn} setVerify={setVerify} />
       <Login loginClass={loginClass} setLogikn={setLogikn}  setRegister={setRegister} setVerify={setVerify} />
