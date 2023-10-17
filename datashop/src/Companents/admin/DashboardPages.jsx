@@ -13,75 +13,75 @@ export default function DashboardPages() {
   return (
     <div className='DashboardPages'>
       <div className="LogoRole">
-        <img src={logo} alt="" className='AdminLogo' />
+     <Link to={'/'} >  <img src={logo} alt="" className='AdminLogo' /></Link>
         <span className='UserRole'>  Supervisor</span>
       </div>
       <div className="Items">
         <div className="iconTitle">
-          <i class="fa-brands fa-slack"></i>
+          <i className="fa-brands fa-slack"></i>
           <p>Dashboard</p>
         </div>
-        <i class="fa-solid fa-chevron-right" ></i>
+        <i className="fa-solid fa-chevron-right" ></i>
       </div>
       <div className="Listes">
 
         <div className="Items" onClick={() => navigate('users')}>
 
           <div className="iconTitle">
-            <i class="fa-solid fa-user" ></i>
+            <i className="fa-solid fa-user " style={{color:'white'}} ></i>
             <p>Users</p>
           </div>
-          <i class="fa-solid fa-chevron-right" ></i>
+          <i className="fa-solid fa-chevron-right" ></i>
 
         </div>
 
         <div className="Items" onClick={() => navigate('product')}>
 
           <div className="iconTitle">
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i className="fa-solid fa-cart-shopping"></i>
             <p>Product</p>
           </div>
-          <i class="fa-solid fa-chevron-right" ></i>
+          <i className="fa-solid fa-chevron-right" ></i>
 
         </div>
 
         <div className="Items" onClick={() => navigate('category')}>
 
           <div className="iconTitle">
-            <i class="fa-solid fa-bars"></i>
+            <i className="fa-solid fa-bars"></i>
             <p>Category</p>
           </div>
-          <i class="fa-solid fa-chevron-right" ></i>
+          <i className="fa-solid fa-chevron-right" ></i>
 
         </div>
 
         <div className="Items" onClick={() => navigate('users')}>
 
           <div className="iconTitle">
-            <i class="fa-solid fa-user" ></i>
+            <i className="fa-solid fa-user" ></i>
             <p>Users</p>
           </div>
-          <i class="fa-solid fa-chevron-right" ></i>
+          <i className="fa-solid fa-chevron-right" ></i>
+
+        </div>
+
+        <div className="Items" onClick={() => navigate('users/')}>
+
+          <div className="iconTitle">
+            <i className="fa-solid fa-user" ></i>
+            <p>Users</p>
+          </div>
+          <i className="fa-solid fa-chevron-right" ></i>
 
         </div>
 
         <div className="Items" onClick={() => navigate('users')}>
 
           <div className="iconTitle">
-            <i class="fa-solid fa-user" ></i>
+            <i className="fa-solid fa-user" ></i>
             <p>Users</p>
           </div>
-          <i class="fa-solid fa-chevron-right" ></i>
-
-        </div>
-
-        <div className="Items" onClick={() => navigate('users')}>
-
-          <div className="iconTitle">
-            <i class="fa-solid fa-user" ></i>
-            <p>Users</p>
-          </div>
-          <i class="fa-solid fa-chevron-right" ></i>
+          <i className="fa-solid fa-chevron-right" ></i>
 
         </div>
 

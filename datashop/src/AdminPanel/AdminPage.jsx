@@ -14,10 +14,12 @@ export default function AdminPage() {
             <div className="AdminPages">
                 <Routes>
                     <Route path='/users' element={<Users />} />
-                    <Route path='user/:id' element={<UserPage />} />
+                    <Route path='users/user/:id' element={<UserPage />} />
                     <Route path='*' element={<Error />} />
+                    <Route path='/' element={<Users />} />
                 </Routes>
             </div>
+            
         </div>
     );
 }

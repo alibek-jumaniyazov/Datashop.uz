@@ -368,3 +368,9 @@ hr {
 .display{
     display: flex;
 }
+.UserPageInfo{
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}

@@ -23,11 +23,6 @@ export default function ProductInfo({ page, setAddKarzinka }) {
         }
     )
 
-
-
-
-
-
     function opisaniOpen() {
         setallInfo({
             with: 88,

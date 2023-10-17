@@ -37,7 +37,7 @@ export default function Users() {
       </div>
       <InputGroup>
         <InputLeftElement pointerEvents='none'>
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i className="fa-solid fa-magnifying-glass"></i>
         </InputLeftElement>
         <Input
           type='text'
