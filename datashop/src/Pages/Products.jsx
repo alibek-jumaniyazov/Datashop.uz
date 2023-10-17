@@ -19,7 +19,7 @@ export default function Products({addProduct}) {
       <div className="allProducts">
         {
           fakeProduct.slice(0,10).map((item, index) => (
-            <Product item={item} key={index} addInfo={addInfo}/>
+            <Product item={item} addInfo={addInfo} key={index}/>
           ))
         }
       </div>
