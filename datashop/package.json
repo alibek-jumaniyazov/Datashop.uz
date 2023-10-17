@@ -20,6 +20,7 @@
     "lockdown": "^0.0.8-dev",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
     "react-router-dom": "^6.14.1",
     "swiper": "^10.3.0"
   },

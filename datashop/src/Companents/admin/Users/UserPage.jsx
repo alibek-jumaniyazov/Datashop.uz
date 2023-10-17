@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { UserContext } from '../../../Context/UserContext';
 import axios from 'axios';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function UserPage() {
   const { id } = useParams();
@@ -79,10 +80,11 @@ export default function UserPage() {
       });
       setUserRole(request.data.user.role)
       console.log(request.data);
+      toast.success("User ni role muvofaqiyatli o'zgartirildi")
 
     } catch (err) {
       console.log(err);
-
+      toast.error("User Role O'zgartirilmadi")
     }
   }
 
@@ -193,6 +195,7 @@ export default function UserPage() {
         </div>
         <button onClick={handleSaveRole}>Сохранить</button>
       </div>
+      <Toaster />
     </div>
   );
 }
