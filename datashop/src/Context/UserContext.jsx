@@ -1,6 +1,6 @@
 // UserContext.js
 import React, { createContext, useEffect, useState } from 'react';
-import { getUserData } from './api';
+import { getCategory } from './api';
 import { getUsers, } from './api';
 import img1 from '../images/laptopa.png'
 import img2 from '../images/laptop.png'
@@ -9,48 +9,7 @@ import img2 from '../images/laptop.png'
 const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
-  const [category, setCategory] = useState([
-    {
-      id: 1,
-      title: 'Ноутбуки',
-      image: img2,
-    },
-    {
-      id: 1,
-      title: 'Ноутбуки',
-      image: img2,
-    },
-    {
-      id: 1,
-      title: 'Ноутбуки',
-      image: img2,
-    },
-    {
-      id: 1,
-      title: 'Ноутбуки',
-      image: img2,
-    },
-
-    {
-      id: 1,
-      title: 'Ноутбуки',
-      image: img2,
-    },
-    {
-      id: 1,
-      title: 'Ноутбуки',
-      image: img2,
-    },
-    {
-      id: 1,
-      title: 'Ноутбуки',
-      image: img2,
-    },{
-      id: 1,
-      title: 'Ноутбуки',
-      image: img2,
-    },
-  ]);
+  const [category, setCategory] = useState([]);
   const [product, setProduct] = useState([]);
   const [users, setUsers] = useState([]);
   const [userId, setUserId] = useState([]);
@@ -190,6 +149,12 @@ const UserProvider = ({ children }) => {
       setUsers(usersInfo.user)
     }
     GetUsers()
+
+    const GetCategory = async () => {
+      const usersInfo = await getCategory();
+      setCategory(usersInfo.category)
+    }
+    GetCategory()
 
     // const GetUserId = async () => {
     //   const usersId = await getUserId();

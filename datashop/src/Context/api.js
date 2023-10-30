@@ -3,7 +3,7 @@ import axios from 'axios';
 const userToken = JSON.parse(localStorage.getItem('token'))
 
 
-const getUserData = async () => {
+const getCategory = async () => {
     try {
         const response = axios.get("http://localhost:9060/api/v1/category")
         return (await response).data;
@@ -12,7 +12,7 @@ const getUserData = async () => {
         return null;
     }
 };
-export { getUserData };
+export { getCategory };
 
 const getUserProduct = async () => {
     try {
@@ -20,7 +20,7 @@ const getUserProduct = async () => {
         return (await response).data;
     } catch (error) {
         console.error('Error fetching user data:', error);
-        return null;    
+        return null;
     }
 };
 export { getUserProduct };
@@ -28,21 +28,21 @@ export { getUserProduct };
 
 
 const getUsers = async () => {
-    try{
-        const response = axios.get("http://localhost:9060/api/v1/user/users",{
-            headers:{
+    try {
+        const response = axios.get("http://localhost:9060/api/v1/user/users", {
+            headers: {
                 Authorization: userToken
             }
         })
-       return (await response).data
+        return (await response).data
     }
-    catch(err){
+    catch (err) {
         console.log(err);
         return null
     }
 }
 
-export {getUsers}
+export { getUsers }
 
 
 // const getUserId = async () => {

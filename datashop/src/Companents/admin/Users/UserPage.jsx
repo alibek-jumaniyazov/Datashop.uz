@@ -14,6 +14,7 @@ export default function UserPage() {
   const url = `http://localhost:9060/api/v1/user/${user.id}`
   const urlRole = `http://localhost:9060/api/v1/user/role/${user.id}`
   const token = JSON.parse(localStorage.getItem('token'));
+  const password = JSON.parse(localStorage.getItem('password'));
 
   const [userRole, setUserRole] = useState(user.role)
   console.log(user);
@@ -28,7 +29,7 @@ export default function UserPage() {
     phone: user.phone,
     email: user.email,
     address: user.address,
-    // password: userPassword,
+    password: password,
   });
 
   const handleChange = (e) => {

@@ -4,8 +4,6 @@ import Boxes from '../Companents/home/Boxes'
 import img1 from "../images/laptop.png"
 import asusLogo from "../images/asus.png"
 import Products from './Products'
-
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -35,11 +33,11 @@ export default function Home({setPage}) {
     <div className='Home'>
       <Banners />
       <div className="allBox">
-        {
+        {/* {
           category.map((item, index) => (
             <Boxes item={item} key={index} />
           ))
-        }
+        } */}
       </div>
       <Products addProduct={addProduct}/>
       <Products />
