@@ -22,16 +22,14 @@ export default function Header() {
   }
 
   return (
-    <>
-    <div className='Header'>
-      <Navbar/>
-      <HeaderComponent addREgister={addREgister} />
-      <Register registerClass={registerClass} setRegister={setRegister}  setLogikn={setLogikn} setVerify={setVerify} />
-      <Login loginClass={loginClass} setLogikn={setLogikn}  setRegister={setRegister} setVerify={setVerify} />
-      <Verify verifyClass={verifyClass} setVerify={setVerify} setRegister={setRegister}  setLogikn={setLogikn} />
-      <MobilKatalog addREgister={addREgister}/> 
-    </div>
+      <div className='Header'>
+        <Navbar />
+        <HeaderComponent addREgister={addREgister} />
+        <Register registerClass={registerClass} setRegister={setRegister} setLogikn={setLogikn} setVerify={setVerify} />
+        <Login loginClass={loginClass} setLogikn={setLogikn} setRegister={setRegister} setVerify={setVerify} />
+        <Verify verifyClass={verifyClass} setVerify={setVerify} setRegister={setRegister} setLogikn={setLogikn} />
+        <MobilKatalog addREgister={addREgister} />
+      </div>
 
-    </>
   )
 }

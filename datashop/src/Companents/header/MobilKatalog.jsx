@@ -25,7 +25,7 @@ export default function MobilKatalog({ addREgister }) {
             <Link to='savat'>
                 <div className="KatalogPage">
                     <img src={iconSavat} alt="" />
-                    <p>Корзина  </p>
+                    <p>Корзина </p>
                 </div>
             </Link>
 

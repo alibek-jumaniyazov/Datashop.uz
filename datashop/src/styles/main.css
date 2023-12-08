@@ -1,12 +1,22 @@
 .Home {
-}
-
-.Banners img {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 20px auto;
 }
 
+.Banners{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
 .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 344px;
     border-radius: 20px;
@@ -19,7 +29,6 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 70px auto;
 }
 
 .Boxes {
@@ -34,11 +43,7 @@
     background: linear-gradient(0deg, rgba(41, 90, 185, 1) 0%, rgba(96, 178, 255, 1) 100%);
 }
 
-.Boxes img {
-    width: 130px;
-    margin-right: -20px;
-    z-index: 1;
-}
+
 
 .boxName {
     font-size: 20px;
@@ -59,7 +64,8 @@
     align-items: flex-start;
 
 }
-.allCarusalLogo{
+
+.allCarusalLogo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,9 +100,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 1240px;
+    width: 100%;
 }
-
+.userInfoProduct img{
+    width: 20px!important;
+}
 .AksesuarName {
     width: 100%;
     margin: 40px auto;
@@ -112,7 +120,8 @@
     font-weight: 700;
     line-height: 27px;
 }
-.AksesuarImg{
+
+.AksesuarImg {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -120,14 +129,19 @@
     gap: 30px;
     margin: 50px auto;
 }
-.images{
+
+.images {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
 }
-
+@media screen and (min-width: 1201px) {
+    .Home{
+        width: 100%;
+    }
+}
 @media screen and (max-width : 414px) and (min-width: 360px) {
     .carousel {
         width: 100%;
@@ -135,10 +149,12 @@
         border-radius: 20px;
         margin-top: 20px;
     }
-    .carousel-item img{
+
+    .carousel-item img {
         height: 190px;
         border-radius: 10px;
     }
+
     .Boxes {
         width: 100%;
         height: 120px;
@@ -152,7 +168,7 @@
         background: rgb(96, 178, 255);
         background: linear-gradient(0deg, rgba(41, 90, 185, 1) 0%, rgba(96, 178, 255, 1) 100%);
     }
-    
+
     .Boxes img {
         width: 130px;
         margin-right: -10px;

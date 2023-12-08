@@ -36,9 +36,11 @@ export default function HeaderComponent({ addREgister }) {
         <>
             <div className="headerConpanents">
                 <div className="headerContainer ">
-                    <Link to={'/'}> <img src={logo} alt="" /> </Link>
-                    <KategoriBtn categoryOpen={categoryOpen} iconCategory={categoryIcon} />
-                    <Search />
+                    <div className="headerLogoKategrSearch">
+                        <Link to={'/'}> <img src={logo} alt="" /> </Link>
+                        <KategoriBtn categoryOpen={categoryOpen} iconCategory={categoryIcon} />
+                        <Search />
+                    </div>
                     <div className="userProductsinfo">
                         <Link to={'/savat'} >
                             <div className="userInfoProduct">
@@ -76,14 +78,14 @@ export default function HeaderComponent({ addREgister }) {
                                     onClick={() => addREgister()}
                                 >
                                     <img src={userr} alt="" />
-                                        <span>
-                                            {
-                                                user ?
-                                                    user.user.name
-                                                    :
-                                                    "Профиль"
-                                            }
-                                        </span>
+                                    <span>
+                                        {
+                                            user ?
+                                                user.user.name
+                                                :
+                                                "Профиль"
+                                        }
+                                    </span>
                                 </div>
 
                         }

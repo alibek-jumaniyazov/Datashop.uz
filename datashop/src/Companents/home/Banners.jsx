@@ -4,6 +4,8 @@ import img2 from '../../images/banner2.png'
 import img3 from '../../images/banner4.png'
 import img4 from '../../images/banner6.png'
 import img5 from '../../images/banner7.jpg'
+
+
 export default function Banners() {
     return (
         <div className='Banners'>

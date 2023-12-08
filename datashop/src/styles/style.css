@@ -8,15 +8,26 @@
     font-family: 'Inter', sans-serif;
     text-decoration: none !important;
   }
-
+  .App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   .container {
     width: 1240px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-  body{
+
+  body {
     width: 100vw;
     height: 100vh;
   }
+
   .none {
     display: none;
   }
@@ -24,16 +35,19 @@
   p {
     margin: 0;
   }
-.Error{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-  @media screen  and  (max-width : 414px) and (min-width: 360px) {
+
+  .Error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width : 414px) and (min-width: 360px) {
     * {
       max-width: 100%;
     }
-    .container{
+
+    .container {
       width: 100%;
     }
   }

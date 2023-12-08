@@ -3,15 +3,16 @@
     margin: 0 auto;
     background-color: #FFFFFF;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footerContainer {
     width: 1240px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .footerInfo {
@@ -74,7 +75,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    width: 300px;
+    width: 280px;
     gap: 14px;
 }
 
@@ -86,7 +87,11 @@
     display: none;
 
 }
-
+@media screen and (max-width: 1201px) and (min-width: 0px) {
+    .footerContainer{
+        width: 90%;
+    }
+}
 @media screen and (max-width : 414px) and (min-width: 360px) {
     .Footer {
         background: #E81D1C;
