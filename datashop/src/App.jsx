@@ -14,7 +14,7 @@ import AdminPage from './AdminPanel/AdminPage'
 function App() {
   const navigate = useNavigate();
 
-  const user = JSON.parse(localStorage.getItem('user')) || { user: { role: 'user' } };
+  const user = JSON.parse(localStorage.getItem('user')) || { user: { role: 'admin' } };
 
   const [page, setPage] = useState([])
   const [addKazinka, setAddKarzinka] = useState([])

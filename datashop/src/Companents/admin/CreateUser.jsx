@@ -38,7 +38,6 @@ function CreateUser() {
   };
 
   const handleSubmit = () => {
-    // Foydalanuvchi ma'lumotlarini serverga post qilish
     fetch('server_url', {
       method: 'POST',
       headers: {
@@ -48,14 +47,11 @@ function CreateUser() {
     })
       .then((response) => response.json())
       .then((data) => {
-        // Post qilish muvaffaqiyatli bo'lsa, ma'lumotlarni konsolga chiqarish
         console.log(data);
-        // Modalni yopish
         closeModal();
       })
       .catch((error) => {
         console.error('Serverga so\'rovni jo\'natishda xato:', error);
-        // Modalni yopish
         closeModal();
       });
   };
@@ -73,7 +69,7 @@ function CreateUser() {
               <button onClick={closeModal}>&times;</button>
             </div>
             <div className="ModalInputs">
-            <input
+              <input
                 type="text"
                 name="name"
                 placeholder="Ism"
